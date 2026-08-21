@@ -10,7 +10,6 @@ body.body-formulario {
 }
 .cadastro {
     min-height: 93.5vh;
-
 }
 
 .cadastro .container {
@@ -21,22 +20,43 @@ body.body-formulario {
 .card {
     width: 37%;
     min-height: 93.5vh;
-
     background-color: white;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    box-sizing: border-box;
 }
 .inicio-cadastro {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 1vh;
+}
+.inicio-cadastro img {
+  width: 8.0vw;
+  height: 13.35vh;
+}
+.inicio-cadastro h2 {
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: #215664;
+}
+.inicio-cadastro h3 {
+    width: 65%;
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    color: #215664;
+}
+.formulario {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 4vh;
 }
