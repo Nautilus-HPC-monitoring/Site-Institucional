@@ -8,3 +8,35 @@ body.body-formulario {
         #43AECA
     );
 }
+.cadastro {
+    min-height: 93.5vh;
+
+}
+
+.cadastro .container {
+    width: 100%;
+    min-height: 93.5vh;
+    display: flex;
+}
+.card {
+    width: 37%;
+    min-height: 93.5vh;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+.inicio-cadastro {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1vh;
+}
