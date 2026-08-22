@@ -1,0 +1,66 @@
+body{
+    font-family: 'Exo 2', sans-serif;
+}
+
+.solucao-nautilus{
+    display: flex;
+    flex-direction: column;
+    margin: auto; /* Se ajusta ao centro da tela */
+    height: 3822px;
+    min-height: 100vh; /* A altura deve ser no mínimo do tamanho da tela (100%) de altura*/
+    max-width: 1920px; /*1920px é o máxido de largura, caso o monitor seja maior que isso, a div será centralizada, isso evita que o site fique completamente espalhado para monitores grandes*/
+    width: 82vw;
+}
+
+.introducao{
+    display: flex;
+    height: 120vh;
+}
+
+.monitoramento-hpc{
+    display: flex;
+    flex-direction: column;
+    width:  45%;
+    max-width: 1920px;
+    height: 100%;
+    padding-top: 7%;
+    padding-right: 7%;
+    box-sizing: border-box; /* Não empurrar a div do lado */
+}
+
+.conheca-a-plataforma{
+    width: 42%;
+    height: 6%; 
+    background-color: #215664; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    font-size: clamp(1vw, 1vw, 1vw);
+}
+
+.conheca-a-plataforma:active{
+    background-color: #183b45;
+}
+
+.separacao-solucao{
+    display: flex;
+    width: 7%;
+    max-width: 1920px;
+    height: 100%;
+}
+
+.ambiente-hpc{
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    width:  48%;
+    max-width: 1920px;
+    height: 92.35%;
+}
+
+.fluxo-nautilus{
+    display: flex;
+    max-width: 1920px;
+    width: 100%;
+    height: 300px;
+}
