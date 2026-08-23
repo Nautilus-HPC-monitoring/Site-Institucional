@@ -1,53 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/pagina-solucao.css" />
+    <title>Solução Nautilus</title>
+
+    <link rel="stylesheet" href="./css/pagina-solucao.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="solucao-nautilus">
-        <div class="introducao">
-            <div class="monitoramento-hpc">
-                <span style="color: #42B8C4; font-weight: bold; font-size: 120%; padding-top: 5%;">SOLUÇÃO
-                    NAUTILUS</span>
-                <span style="font-size: 270%; color: #215664;">Monitoramento de <span
-                        style="color: #42B8C4;">HPC</span>,
-                    centralizado em uma única <span style="color: #42B8C4;">plataforma.</span><br><span
-                        style="color: #42B8C4;">_</span></span>
-                <p style="font-size: 100%; padding-bottom: 4%;">Acompanhe o estado dos recursos computacionais,
-                    identifique comportamentos críticos e obtenha uma visão clara da sua infraestrutura de alta
-                    performance</p>
-                <button class="conheca-a-plataforma">Conheça a plataforma ⟶</button>
-                <div></div>
-                <p style="color: #42B8C4; font-weight: bold; font-size: 120%; margin-top: 20vh;">SOBRE O PROJETO<br> __
-                </p>
-                <span style="font-size: 310%;">Da complexibilidade à clareza.</span>
+
+
+    <section class="secao-solucao-nautilus">
+        <div class="container">
+
+            <div class="introducao">
+                <div class="monitoramento-hpc">
+                    <span class="titulo-solucao">
+                        SOLUÇÃO NAUTILUS
+                    </span>
+
+                    <span class="titulo-principal">
+                        Monitoramento de <span class="azul-claro">HPC</span>,
+                        centralizado em uma única <span class="azul-claro">plataforma.<br></span>
+                        <span class="azul-claro">_</span>
+                    </span>
+
+                    <p class="descricao">
+                        Acompanhe o estado dos recursos computacionais,
+                        identifique comportamentos críticos e obtenha uma
+                        visão clara da sua infraestrutura de alta performance
+                    </p>
+
+                    <button class="conheca-a-plataforma">
+                        Conheça a plataforma ⟶
+                    </button>
+
+                    <p class="sobre-projeto">
+                        SOBRE O PROJETO<br>
+                        __
+                    </p>
+                    <span class="titulo-projeto">
+                        Da complexibilidade à clareza.
+                    </span>
+                </div>
+
+                <div class="separacao-solucao"></div>
+
+                <div class="ambiente-hpc">
+                    <img src="assets/HPC.png" alt="HPC">
+                    <p>
+                        Ambientes HPC reúnem diversos recursos
+                        computacionais trabalhando simultaneamente.
+                        Essa complexidade torna essencial compreender
+                        como cada componente está organizado e como
+                        eles se relacionam.
+                    </p>
+                    <p>
+                        A solução desenvolvida pela
+                        <span class="azul-claro">NAUTILUS</span>
+                        visa tornar essa infraestrutura mais clara,
+                        conectando a visão do ambiente aos clusters,
+                        nodes e seus recursos computacionais.
+                    </p>
+                </div>
             </div>
-            <div class="separacao-solucao">
+
+            <div class="fluxo-nautilus">
+                <div class="fluxo">
+                    <img src="assets/server.png" alt="Ambiente-HPC">
+                    <div>AMBIENTE HPC</div>
+                    <p>Visão geral da infraestrutura</p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/lines.png" alt="linha">
+                </div>
+                <div class="fluxo">
+                    <img src="assets/dados.png" alt="Clusters">
+                    <div>CLUSTERS</div>
+                    <p>Agrupamento de recursos</p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/lines.png" alt="linha">
+                </div>
+                <div class="fluxo">
+                    <img src="assets/nodes.png" alt="Nodes">
+                    <div>NODES</div>
+                    <p>Máquinas que executam os processos</p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/lines.png" alt="linha">
+                </div>
+                <div class="fluxo">
+                    <img src="assets/recursos.png" alt="recursos">
+                    <div>RECURSOS</div>
+                    <p>CPU, memória, disco e rede em cada node.</p>
+                </div>
             </div>
-            <div class="ambiente-hpc">
-                <img src="assets/HPC.png" alt="HPC" style="width: 100%; height: 55%;">
-                <p style="padding-top: 22%; padding-left: 35%;">Ambientes HPC reúnem diversos recursos
-                    <br>computacionais trabalhando simultaneamente. Essa <br> complexidade torna essencial compreender
-                    como <br>cada componente está organizado e como eles se <br>relacionam.
-                </p>
-                <p style="padding-left: 35%;">A solução desenvolvida pela <span style="color: #42B8C4;">NAUTILUS</span>
-                    visa <br> tornar essa infraestrutura mais clara, <br> conectando a visão do ambiente aos clusters,
-                    <br> nodes e seus recursos computacionais.
-                </p>
-            </div>
-        </div>
-        <div class="fluxo-nautilus">
 
         </div>
-    </div>
+    </section>
+
+
+    <section class="secao-como-funciona">
+        <div class="container">
+            <div class="conteudo-como-funciona">
+                <p class="sobre-projeto">
+                    Como Funciona a Solução<br>
+                    __
+                </p>
+                <h2 class="titulo-como-funciona">
+                Monitoramento que<br>
+                transforma dados em ação
+            </h2>
+            <p class="descricao-como-funciona">
+                A plataforma de monitoramento <span class="azul-claro">HPC</span> acompanha continuamente
+                os recursos dos nodes e centraliza as informações coletadas
+                em uma única plataforma. Quando uma condição exige atenção,
+                a equipe consegue identificar o componente afetado e obter o
+                contexto necessário para analisar a situação
+            </p>
+            <img src="assets/HPC2.png" alt="">
+            <img src="assets/HPC3.png" alt="">
+            <img src="assets/" alt="">
+            
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>

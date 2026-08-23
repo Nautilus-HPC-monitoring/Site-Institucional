@@ -1,66 +1,323 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     font-family: 'Exo 2', sans-serif;
 }
 
-.solucao-nautilus{
+/* 
+   ESTRUTURA DE SEÇÕES E CONTAINER
+*/
+
+.container {
     display: flex;
     flex-direction: column;
-    margin: auto; /* Se ajusta ao centro da tela */
-    height: 3822px;
-    min-height: 100vh; /* A altura deve ser no mínimo do tamanho da tela (100%) de altura*/
-    max-width: 1920px; /*1920px é o máxido de largura, caso o monitor seja maior que isso, a div será centralizada, isso evita que o site fique completamente espalhado para monitores grandes*/
+    min-height: 100vh;
+    margin: auto;
+    height: auto;
+    max-width: 1920px;
     width: 82vw;
 }
 
-.introducao{
+.secao-solucao-nautilus {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.secao-como-funciona {
     display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #215664;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.conteudo-como-funciona {
+    width: 100%;
+    margin: 0;
+}
+
+/* 
+   INTRODUÇÃO
+*/
+
+.introducao {
+    display: flex;
+    width: 100%;
     height: 120vh;
 }
 
-.monitoramento-hpc{
+.monitoramento-hpc {
     display: flex;
     flex-direction: column;
-    width:  45%;
-    max-width: 1920px;
+    width: 45%;
     height: 100%;
     padding-top: 7%;
     padding-right: 7%;
-    box-sizing: border-box; /* Não empurrar a div do lado */
 }
 
-.conheca-a-plataforma{
+.titulo-solucao {
+    color: #42B8C4;
+    font-weight: bold;
+    font-size: 120%;
+    padding-top: 5%;
+}
+
+.titulo-principal {
+    font-size: clamp(2rem, 2.7vw, 3.4rem);
+    color: #215664;
+}
+
+.azul-claro {
+    color: #42B8C4;
+}
+
+.descricao {
+    font-size: 100%;
+    padding-bottom: 4%;
+}
+
+.conheca-a-plataforma {
     width: 42%;
-    height: 6%; 
-    background-color: #215664; 
+    min-height: 45px;
+    height: 6%;
+    background-color: #215664;
     color: white;
-    border: none; 
-    border-radius: 5px; 
-    font-size: clamp(1vw, 1vw, 1vw);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-.conheca-a-plataforma:active{
+.conheca-a-plataforma:active {
     background-color: #183b45;
 }
 
-.separacao-solucao{
+.sobre-projeto {
+    color: #42B8C4;
+    font-weight: bold;
+    font-size: 120%;
+    margin-top: 20vh;
+}
+
+.titulo-projeto {
+    font-size: clamp(2rem, 3.1vw, 3.8rem);
+}
+
+/* 
+   SEPARAÇÃO
+*/
+
+.separacao-solucao {
     display: flex;
     width: 7%;
-    max-width: 1920px;
     height: 100%;
 }
 
-.ambiente-hpc{
+/* 
+   AMBIENTE HPC
+*/
+
+.ambiente-hpc {
     margin-top: 6%;
     display: flex;
     flex-direction: column;
-    width:  48%;
-    max-width: 1920px;
+    width: 48%;
     height: 92.35%;
 }
 
-.fluxo-nautilus{
+.ambiente-hpc img {
+    width: 100%;
+    height: 55%;
+    object-fit: contain;
+}
+
+.ambiente-hpc p {
+    font-size: 140%;
+    padding-left: 35%;
+    padding-top: 5%;
+    margin: 0;
+}
+
+/* 
+   FLUXO
+*/
+
+.fluxo-nautilus {
     display: flex;
-    max-width: 1920px;
     width: 100%;
     height: 300px;
+}
+
+.fluxo {
+    display: flex;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fluxo img {
+    width: 40%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.fluxo div {
+    font-weight: bold;
+    font-size: 140%;
+    margin-top: 5%;
+}
+
+.fluxo p {
+    margin: 5px 0;
+}
+
+/*Como-Funciona*/
+
+.titulo-como-funciona {
+    font-size: clamp(2rem, 2.7vw, 3.4rem);
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.15;
+    margin: 0 0 35px 0;
+}
+
+.descricao-como-funciona {
+    color: #ffffff;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* 
+   TABLETS
+*/
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 90vw;
+    }
+
+    .introducao {
+        height: auto;
+        min-height: 120vh;
+    }
+
+    .monitoramento-hpc {
+        padding-right: 4%;
+    }
+
+    .ambiente-hpc p {
+        padding-left: 10%;
+    }
+
+    .conheca-a-plataforma {
+        width: 60%;
+    }
+
+}
+
+/* 
+   CELULARES
+*/
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .introducao {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .monitoramento-hpc {
+        width: 100%;
+        height: auto;
+        padding-top: 10%;
+        padding-right: 0;
+    }
+
+    .titulo-solucao {
+        font-size: 100%;
+    }
+
+    .titulo-principal {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.1;
+    }
+
+    .descricao {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding-bottom: 4%;
+    }
+
+    .conheca-a-plataforma {
+        width: 70%;
+        height: 50px;
+        font-size: 0.95rem;
+    }
+
+    .sobre-projeto {
+        margin-top: 15vh;
+    }
+
+    .titulo-projeto {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.1;
+    }
+
+    .separacao-solucao {
+        display: none;
+    }
+
+    .ambiente-hpc {
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .ambiente-hpc img {
+        width: 100%;
+        height: auto;
+    }
+
+    .ambiente-hpc p {
+        padding: 5% 0 0 0;
+        line-height: 1.5;
+    }
+
+    .fluxo-nautilus {
+        flex-direction: column;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .fluxo {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .fluxo img {
+        width: 25%;
+        height: auto;
+    }
+
 }
