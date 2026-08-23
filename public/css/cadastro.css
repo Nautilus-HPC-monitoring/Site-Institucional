@@ -135,3 +135,17 @@ body.body-formulario {
     font-weight: 300;
     line-height: 1.4;
 }
+.img-caracol {
+    position: absolute;
+    width: 28.92vw;
+    height: auto;
+    top: 2vh;
+    left: 0;
+}
+.img-circulo2 {
+    position: absolute;
+    width: 33.2vw;
+    height: 54vh;
+    right: -7vw;
+    bottom: -8vh;
+}
