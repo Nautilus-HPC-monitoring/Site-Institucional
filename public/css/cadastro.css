@@ -87,3 +87,51 @@ body.body-formulario {
     cursor: pointer;
     align-items: center;
 }
+.imagem-login {
+ width: 63%;
+    min-height: 93.5vh;
+    position: relative;
+    overflow: hidden;
+}
+.img-grade {
+    position: absolute;
+    width: 37.3vw;
+    height: 68.9vh;
+    top: 2vh;
+    left: 0;
+}
+.img-circulo {
+    position: absolute;
+    width: 33.2vw;
+    height: 54vh;
+    right: -7vw;
+    bottom: -8vh;
+}
+.textos-login {
+    position: absolute;
+    top: 25vh;
+    left: 57%;
+    font-family: "Sora", sans-serif;
+    color: white;
+}
+.textos-login h1 {
+    width: 19vw;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+.linha-login {
+    width: 3vw;
+    height: 0.7vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    background-color: #43AECA;
+}
+.textos-login p {
+    width: 16.4vw;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
