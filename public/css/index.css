@@ -1,0 +1,12 @@
+body {
+    min-height: 200vh;
+}
+
+main {
+    height: 500px;
+    background: linear-gradient(
+        90deg,
+        var(--cor-primaria),
+        var(--cor-secundaria)
+    );
+}
