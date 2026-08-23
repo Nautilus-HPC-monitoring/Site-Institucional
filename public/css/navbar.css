@@ -1,0 +1,170 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 72px;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar_scrolled {
+    background: rgba(255, 255, 255, 0.3);
+
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.navbar_container {
+    width: 100%;
+
+    padding-left: 0;
+    padding-right: clamp(20px, 3vw, 48px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar_left {
+    display: flex;
+    align-items: center;
+    gap: clamp(35px, 4vw, 70px);
+
+    background: var(--cor-branco);
+
+    padding: 8px 20px 8px 48px;
+
+    border-radius: 0 50px 50px 0;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    color: var(--cor-preto);
+
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    flex-shrink: 0;
+}
+
+.navbar_logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.navbar_nav {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(20px, 2.5vw, 38px);
+}
+
+.navbar_nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--cor-secundaria);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid var(--cor-secundaria);
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+
+    white-space: nowrap;
+}
+
+.navbar_nav a:hover {
+    color: var(--cor-primaria);
+    border-bottom-color: var(--cor-primaria);
+}
+
+.navbar_nav a img {
+    width: 15px;
+    height: 15px;
+}
+
+.navbar_nav .seta_hover {
+    display: none;
+}
+
+.navbar_nav a:hover .seta_normal {
+    display: none;
+}
+
+.navbar_nav a:hover .seta_hover {
+    display: block;
+}
+
+.navbar_actions {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(8px, 1vw, 12px);
+
+    flex-shrink: 0;
+}
+
+.navbar_actions button {
+    min-width: 110px;
+    height: 38px;
+
+    padding-inline: clamp(16px, 1.5vw, 22px);
+
+    border: 1px solid var(--cor-preto);
+    border-radius: 50px;
+
+    background: transparent;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.navbar_actions button:first-child {
+    background: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+.navbar_actions button:last-child {
+    background: var(--cor-preto);
+    color: var(--cor-branco);
+}
