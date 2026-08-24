@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Login</title>
+    <title>Nautilus - Login</title>
 
     <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="stylesheet" href="./css/global.css">
 
     <script src="./js/navbar.js" defer></script>
@@ -24,6 +24,10 @@
 
             <div class="navbar_left">
 
+                <button class="navbar_menu" id="btnMenu" aria-label="Abrir menu">
+                    ☰
+                </button>
+
                 <a href="#" class="navbar_logo">
                     <img src="./assets/img/logo.png" alt="Nautilus Logo">
                     Nautilus
@@ -32,20 +36,26 @@
                 <nav class="navbar_nav">
                     <a href="#">
                         Serviço como solução
-                        <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-                        <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                        <span class="navbar_setas">
+                            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+                            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                        </span>
                     </a>
 
                     <a href="#">
                         Equipe
-                        <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-                        <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                        <span class="navbar_setas">
+                            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+                            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                        </span>
                     </a>
 
                     <a href="#">
                         Valores
-                        <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-                        <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                        <span class="navbar_setas">
+                            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+                            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                        </span>
                     </a>
                 </nav>
 
@@ -59,6 +69,56 @@
         </div>
     </header>
 
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar_topo">
+            <a href="#" class="sidebar_logo">
+                <img src="./assets/img/logo.png" alt="Nautilus Logo">
+                Nautilus
+            </a>
+
+            <button class="sidebar_fechar" id="btnFechar">
+                ✕
+            </button>
+        </div>
+
+        <nav class="sidebar_nav">
+
+            <a href="#">
+                <span>Serviço como solução</span>
+
+                <span class="sidebar_setas">
+                    <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+                    <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                </span>
+            </a>
+
+            <a href="#">
+                <span>Equipe</span>
+
+                <span class="sidebar_setas">
+                    <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+                    <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                </span>
+            </a>
+
+            <a href="#">
+                <span>Valores</span>
+
+                <span class="sidebar_setas">
+                    <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+                    <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+                </span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar_actions">
+            <button>Login</button>
+            <button>Cadastre-se</button>
+        </div>
+
+    </aside>
 
     <div class="cadastro">
         <div class="alerta_erro">
@@ -70,7 +130,7 @@
             <div class="card">
                 <div class="inicio-cadastro">
                     <img src="assets/imgs/Group 36.png" alt="">
-                    <h2>crie sua conta na NAUTILUS</h2>
+                    <h2>Bem-vindo à NAUTILUS</h2>
                     <h3>Acesse sua plataforma de monitoramento de
                         alta performance.</h3>
                 </div>
