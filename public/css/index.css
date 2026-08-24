@@ -2,6 +2,12 @@ body {
     min-height: 200vh;
 }
 
+.container {
+    width: 100%;
+    padding-inline: clamp(80px, 8.33vw, 160px);
+    margin-inline: auto;
+}
+
 .hero_home {
     margin-top: 80px;
 
