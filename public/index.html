@@ -2,80 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Página Inicial</title>
+  <title>Nautilus - Home</title>
 
-    <script src="./js/sessao.js"></script>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/navbar.css">
 
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="./js/navbar.js" defer></script>
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
+
+  <header class="navbar">
+    <div class="navbar_container">
+
+      <div class="navbar_left">
+
+        <a href="#" class="navbar_logo">
+          <img src="./assets/img/logo.png" alt="Nautilus Logo">
+          Nautilus
+        </a>
+
+        <nav class="navbar_nav">
+          <a href="#">
+            Serviço como solução
+            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+          </a>
+
+          <a href="#">
+            Equipe
+            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+          </a>
+
+          <a href="#">
+            Valores
+            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+          </a>
+        </nav>
+
       </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
+
+      <div class="navbar_actions">
+        <button>Login</button>
+        <button>Cadastre-se</button>
       </div>
+
     </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+  </header>
+
+  <main>
+    <section class="hero_home container">
+
+      <div class="hero_texto">
+        <h1>
+          Adote um sistema
+          de monitoramento
+          para hardware do
+          seu HPC
+        </h1>
+
+        <p>
+          À medida que a quantidade de dados processados aumentam,
+          é necessário garantir que o hardware opere o tempo esperado.
+        </p>
+
+        <div class="hero_botoes">
+          <a href="#" class="btn_destaque">
+            <span>Entenda mais sobre o produto que oferecemos</span>
+            <img src="./assets/icon/seta_direita_branca.svg" alt="Seta Branca">
+          </a>
+
+          <a href="#" class="btn_secundario">
+            <span>Entenda o valor que esse tipo de serviço trás para o seu produto</span>
+            <span class="setas">
+              <img src="./assets/icon/seta_direita_azul.svg" alt="Seta Azul">
+              <img src="./assets/icon/seta_direita_branca.svg" alt="Seta branca" class="seta_hover">
+            </span>
+          </a>
         </div>
       </div>
-    </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023-2026</h4>
+
+      <div class="hero_imagem">
+        <img src="./assets/img/home/plataforma_petroleo.png" alt="Plataforma de petróleo">
       </div>
-    </div>
-  </body>
+
+      <aside class="hero_servicos">
+        <span class="servicos_titulo">Serviços</span>
+
+        <a href="#" class="servico_item">
+          <p>
+            Acompanhe continuamente o uso de CPU, memória RAM e armazenamento dos nodes do ambiente HPC.
+          </p>
+
+          <img src="./assets/icon/seta_direita_azul.svg" alt="Seta Azul">
+        </a>
+
+        <a href="#" class="servico_item">
+          <p>
+            Identifique comportamentos anormais nos recursos monitorados e receba alertas para auxiliar na prevenção de
+            incidentes.
+          </p>
+
+          <img src="./assets/icon/seta_direita_azul.svg" alt="Seta Azul">
+        </a>
+        <!--
+        <div class="servicos_paginas">
+          <span class="ativo">1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+        </div>
+        -->
+      </aside>
+
+
+      <div class="hero_banner">
+
+        <div class="banner_logo">
+          <img src="./assets/img/logo.png" alt="Nautilus">
+          <span>Nautilus</span>
+        </div>
+
+        <p>
+          Referência na construção de sistemas de monitoramento de hardware.
+          Cadastre-se para entrar em contato e configurar um sistema para o seu ambiente.
+        </p>
+
+        <a href="#" class="banner_cta">
+          Cadastre-se
+          <span class="setas">
+            <img src="./assets/icon/seta_direita_azul.svg" alt="Seta Azul" class="seta_normal">
+            <img src="./assets/icon/seta_direita_branca.svg" alt="Seta branca" class="seta_hover">
+          </span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+</body>
 
 </html>
