@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Exo 2";
-    src: url("../assets/fonts/Exo2-VariableFont_wght.ttf") format("truetype");
+    src: url("../assets/fonts/Exo2/Exo2-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
 }
@@ -31,4 +31,10 @@ input,
 select,
 textarea {
     font: inherit;
+}
+
+.container {
+    width: 100%;
+    padding-inline: clamp(80px, 8.33vw, 160px);
+    margin-inline: auto;
 }
