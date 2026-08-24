@@ -1,14 +1,13 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+DROP USER IF EXISTS 'user_admin'@'localhost';
+CREATE USER 'user_admin'@'localhost' IDENTIFIED BY 'SPTech#2026';
 
-/*
-comandos para mysql server
-*/
+GRANT ALL PRIVILEGES ON nautilus.* TO 'user_admin'@'SPTech#2026';
+FLUSH PRIVILEGES;
 
-CREATE DATABASE Nautilus;
 
-USE Nautilus;
+DROP DATABASE IF EXISTS nautilus;
+CREATE DATABASE nautilus;
+USE nautilus;
 
 CREATE TABLE empresa(
 	id_empresa INT PRIMARY KEY AUTO_INCREMENT,
