@@ -7,24 +7,31 @@ body.body-formulario {
         #215664,
         #43AECA
     );
+
+    padding-top: 6.5vh;
+    box-sizing: border-box;   
 }
+
 .cadastro {
-    min-height: 93.5vh;
+    height: calc(100vh - 6.5vh);
 }
 
 .cadastro .container {
     width: 100%;
-    min-height: 93.5vh;
+    height: 100%;
     display: flex;
+    margin: 0;
 }
 .card {
     width: 37%;
-    min-height: 93.5vh;
+    min-height: calc(100vh - 6.5vh);
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-left: 0;
+
 }
 .inicio-cadastro {
     width: 100%;
@@ -88,8 +95,8 @@ body.body-formulario {
     align-items: center;
 }
 .imagem-login {
- width: 63%;
-    min-height: 93.5vh;
+    width: 63%;
+    min-height: calc(100vh - 6.5vh);
     position: relative;
     overflow: hidden;
 }

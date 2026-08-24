@@ -10,32 +10,52 @@
   <script src="./js/sessao.js"></script>
 
   <link rel="stylesheet" href="./css/cadastro.css" />
+  <link rel="stylesheet" href="./css/navbar.css">
+<link rel="stylesheet" href="./css/global.css">
+<script src="./js/navbar.js" defer></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body class="body-formulario" onload="listar()">
-  <!--header inicio-->
-  <!--<div class="header">
-    <div class="container">
-      <h1 class="titulo">AquaTech</h1>
-      <ul class="navbar">
-        <li>
-          <a href="index.html">Inicial</a>
-        </li>
-        <li>
-          <a href="simulador.html">Simulador</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li class="agora">
-          <a href="#">Cadastro</a>
-        </li>
-      </ul>
+   <header class="navbar">
+    <div class="navbar_container">
+
+      <div class="navbar_left">
+
+        <a href="#" class="navbar_logo">
+          <img src="assets/imgs/logo.png" alt="Nautilus Logo">
+          Nautilus
+        </a>
+
+        <nav class="navbar_nav">
+          <a href="#">
+            Serviço como solução
+            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+          </a>
+
+          <a href="#">
+            Equipe
+            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+          </a>
+
+          <a href="#">
+            Valores
+            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+          </a>
+        </nav>
+
+      </div>
+
+      <div class="navbar_actions">
+        <button>Login</button>
+        <button>Cadastre-se</button>
+      </div>
+
     </div>
-  </div> -->
-  <!--header fim-->
+  </header>
      <div class="cadastro">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
