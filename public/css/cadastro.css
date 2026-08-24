@@ -2,14 +2,16 @@ body.body-formulario {
     margin: 0;
     min-height: 100vh;
 
-    background: linear-gradient(
-        to bottom,
-        #215664,
-        #43AECA
-    );
+    background: linear-gradient(to bottom,
+            var(--cor-secundaria),
+            var(--cor-primaria));
 
     padding-top: 6.5vh;
-    box-sizing: border-box;   
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: var(--cor-branco);
 }
 
 .cadastro {
@@ -19,140 +21,194 @@ body.body-formulario {
 .cadastro .container {
     width: 100%;
     height: 100%;
+
     display: flex;
+
     margin: 0;
 }
+
 .card {
     width: 37%;
     min-height: calc(100vh - 6.5vh);
-    background-color: white;
+
+    background-color: var(--cor-branco);
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 0;
 
+    margin-left: 0;
 }
+
 .inicio-cadastro {
     width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 2vh;
 }
+
 .inicio-cadastro img {
-  width: 8.0vw;
-  height: 15.0vh;
+    width: 8vw;
+    height: 15vh;
 }
+
 .inicio-cadastro h2 {
     margin: 0;
-    font-family: "Sora", sans-serif;
+
     font-size: 1.375rem;
     font-weight: bold;
-    color: #215664;
+
+    color: var(--cor-secundaria);
 }
+
 .inicio-cadastro h3 {
     width: 65%;
     margin: 0;
-    font-family: "Sora", sans-serif;
+
     font-size: 1rem;
     font-weight: normal;
+
     text-align: center;
-    color: #215664;
+
+    color: var(--cor-secundaria);
 }
+
 .formulario {
     width: 65%;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     gap: 4vh;
     margin-top: 6vh;
-    align-items: center;
 }
+
 .campo {
     width: 100%;
+
     display: flex;
     justify-content: center;
 }
+
 .formulario input {
     width: 95%;
     height: 6.5vh;
+
     box-sizing: border-box;
+
     padding: 0 0.7vw;
-    border: 0.05rem solid #215664;
+
+    border: 0.05rem solid var(--cor-secundaria);
+
     font-size: 0.7rem;
+
     align-items: center;
 }
+
 .botao {
     width: 95%;
     height: 6.5vh;
+
     border: 0;
-    background-color: #215664;
-    color: white;
-    font-family: "Sora", sans-serif;
+
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+
     font-size: 0.9rem;
     font-weight: 600;
+
     cursor: pointer;
+
     align-items: center;
 }
+
 .imagem-login {
     width: 63%;
     min-height: calc(100vh - 6.5vh);
+
     position: relative;
+
     overflow: hidden;
 }
+
 .img-grade {
     position: absolute;
+
     width: 37.3vw;
     height: 68.9vh;
+
     top: 2vh;
     left: 0;
 }
+
 .img-circulo {
     position: absolute;
+
     width: 33.2vw;
     height: 54vh;
+
     right: -7vw;
     bottom: -8vh;
 }
+
 .textos-login {
     position: absolute;
+
     top: 25vh;
     left: 57%;
-    font-family: "Sora", sans-serif;
-    color: white;
+
+    color: var(--cor-branco);
 }
+
 .textos-login h1 {
     width: 19vw;
     margin: 0;
+
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.25;
 }
+
 .linha-login {
     width: 3vw;
     height: 0.7vh;
+
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
-    background-color: #43AECA;
+
+    background-color: var(--cor-primaria);
 }
+
 .textos-login p {
     width: 16.4vw;
     margin: 0;
+
     font-size: 0.9rem;
     font-weight: 300;
     line-height: 1.4;
 }
+
 .img-caracol {
     position: absolute;
+
     width: 28.92vw;
     height: auto;
+
     top: 2vh;
     left: 0;
 }
+
 .img-circulo2 {
     position: absolute;
+
     width: 33.2vw;
     height: 54vh;
+
     right: -7vw;
     bottom: -8vh;
 }

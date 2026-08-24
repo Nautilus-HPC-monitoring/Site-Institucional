@@ -6,44 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
   <script src="./js/sessao.js"></script>
 
-  <link rel="stylesheet" href="./css/cadastro.css" />
   <link rel="stylesheet" href="./css/navbar.css">
-<link rel="stylesheet" href="./css/global.css">
-<script src="./js/navbar.js" defer></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./css/cadastro.css" />
+  <link rel="stylesheet" href="./css/global.css">
 </head>
 
 <body class="body-formulario" onload="listar()">
-   <header class="navbar">
+  <header class="navbar">
     <div class="navbar_container">
 
       <div class="navbar_left">
 
+        <button class="navbar_menu" id="btnMenu" aria-label="Abrir menu">
+          ☰
+        </button>
+
         <a href="#" class="navbar_logo">
-          <img src="assets/imgs/logo.png" alt="Nautilus Logo">
+          <img src="./assets/img/logo.png" alt="Nautilus Logo">
           Nautilus
         </a>
 
         <nav class="navbar_nav">
           <a href="#">
             Serviço como solução
-            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            <span class="navbar_setas">
+              <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+              <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            </span>
           </a>
 
           <a href="#">
             Equipe
-            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            <span class="navbar_setas">
+              <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+              <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            </span>
           </a>
 
           <a href="#">
             Valores
-            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            <span class="navbar_setas">
+              <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+              <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            </span>
           </a>
         </nav>
 
@@ -56,65 +63,109 @@
 
     </div>
   </header>
-     <div class="cadastro">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-  
-    <div class="container">
-      <div class="card">
-        <div class="inicio-cadastro">
-          <img src="assets/imgs/Group 36.png" alt="">
-  <h2>crie sua conta na NAUTILUS</h2>
-  <h3>Acesse sua plataforma de monitoramento de
-                alta performance.</h3>
-        </div>
-      
-        <div class="formulario">
 
-          <div class="campo">
-            <input id="nome_input" type="text" placeholder="Nome" />
-          </div>
-          <div class="campo">
-            <input id="email_input" type="text" placeholder="Email" />
-          </div>
-          <div class="campo">
-            <input id="senha_input" type="password" placeholder="Senha" />
-          </div>
-          <div class="campo">
-            <input id="confirmacao_senha_input" type="password" placeholder="Confirme sua senha" />
-          </div>
-          <button class="botao" onclick="cadastrar()">Cadastrar</button>
-        </div>
+  <aside class="sidebar" id="sidebar">
 
+    <div class="sidebar_topo">
+      <a href="#" class="sidebar_logo">
+        <img src="./assets/img/logo.png" alt="Nautilus Logo">
+        Nautilus
+      </a>
 
+      <button class="sidebar_fechar" id="btnFechar">
+        ✕
+      </button>
+    </div>
+
+    <nav class="sidebar_nav">
+
+      <a href="#">
+        <span>Serviço como solução</span>
+
+        <span class="sidebar_setas">
+          <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+          <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+        </span>
+      </a>
+
+      <a href="#">
+        <span>Equipe</span>
+
+        <span class="sidebar_setas">
+          <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+          <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+        </span>
+      </a>
+
+      <a href="#">
+        <span>Valores</span>
+
+        <span class="sidebar_setas">
+          <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+          <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+        </span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar_actions">
+      <button>Login</button>
+      <button>Cadastre-se</button>
+    </div>
+
+  </aside>
+
+  <div class="cadastro">
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
       </div>
-      <div class="imagem-login">
-    <img src="assets/imgs/imgcaracol.png" class="img-caracol" alt="">
-     <div class="textos-login">
-        <h1>Performance começa com<br>inteligência.</h1>
 
-        <div class="linha-login"></div>
+      <div class="container">
+        <div class="card">
+          <div class="inicio-cadastro">
+            <img src="assets/imgs/Group 36.png" alt="">
+            <h2>Crie sua conta na NAUTILUS</h2>
+            <h3>Acesse sua plataforma de monitoramento de
+              alta performance.</h3>
+          </div>
 
-        <p>
-            Cadastra-se na Nautilus e tenha<br>
-             acesso a uma plataforma segura,<br>
-             inteligente e de alta<br>
+          <div class="formulario">
+
+            <div class="campo">
+              <input id="nome_input" type="text" placeholder="Nome" />
+            </div>
+            <div class="campo">
+              <input id="email_input" type="text" placeholder="Email" />
+            </div>
+            <div class="campo">
+              <input id="senha_input" type="password" placeholder="Senha" />
+            </div>
+            <div class="campo">
+              <input id="confirmacao_senha_input" type="password" placeholder="Confirme sua senha" />
+            </div>
+            <button class="botao" onclick="cadastrar()">Cadastrar</button>
+          </div>
+
+        </div>
+        <div class="imagem-login">
+          <img src="assets/imgs/imgcaracol.png" class="img-caracol" alt="">
+          <div class="textos-login">
+            <h1>Performance começa com<br>inteligência.</h1>
+
+            <div class="linha-login"></div>
+
+            <p>
+              Cadastra-se na Nautilus e tenha<br>
+              acesso a uma plataforma segura,<br>
+              inteligente e de alta<br>
               performance.
-        </p>
+            </p>
+          </div>
+          <img src="assets/imgs/Group 30.png" class="img-circulo2" alt="">
+        </div>
+      </div>
     </div>
-    <img src="assets/imgs/Group 30.png" class="img-circulo2" alt="">
-</div>
-    </div>
-  </div>
-  <!--footer inicio-->
-  <!--<div class="footer">
-    <div class="container">
-      <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023-2026</h4>
-    </div>
-  </div> -->
-  <!-- footer fim-->
 </body>
 
 </html>
@@ -133,7 +184,7 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-  
+
     var idEmpresaVincular = 1;
 
     // Verificando se há algum campo em branco
@@ -154,7 +205,7 @@
     }
 
     // Verificando se o código de ativação é de alguma empresa cadastrada
- 
+
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -200,9 +251,6 @@
 
     return false;
   }
-
-  // Listando empresas cadastradas 
-
 
   function sumirMensagem() {
     cardErro.style.display = "none";
