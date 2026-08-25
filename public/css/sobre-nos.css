@@ -1,0 +1,94 @@
+.main-content-area{
+	margin-top: 8%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-text{
+	padding-top: 1%;
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+.main-img-area{
+	width: 50%;
+}
+
+.subtitulo{
+	font-size: 1.7rem; /* 25px */ 
+	color: var(--cor-primaria);
+	font-weight: 600;
+}
+
+.titulo{
+	margin-top: 2%;
+	font-size: 3.8rem; /* 55px */ 
+	color: var(--cor-secundaria);
+}
+
+.text-size{
+	font-size: 1.5rem;  /* 22px */ 
+}
+
+.main-desc{
+	margin-top: 25%;
+	/* border: solid 2px blue; */
+}
+
+.carrossel{
+	margin-top: 5%;
+	display: flex;
+	/* border: dashed 1px blue; */
+	height: 25vh;
+	justify-content: space-between;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	gap: 5%;
+	padding: 1%;
+	width: 15%;
+}
+
+.img-card{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+
+.titulo-card{
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.text-card{
+	text-align: center;
+	font-size: 1.1rem;
+	padding:5%;
+}
+
+.nossa-historia{
+	margin-top: 4%;
+	display: flex;
+}
+
+.text-area-historia{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 40%;
+}
+
+.p-historia{
+	margin-top: 5%;
+}
+
+.img-area-historia{
+	width: 60%;
+}
+
