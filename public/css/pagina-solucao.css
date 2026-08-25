@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -40,7 +39,8 @@ body {
     height: auto;
     background-color: #215664;
     flex-direction: column;
-    min-height: 100vh;
+    padding: 80px 0;
+    align-items: center;
 }
 
 .conteudo-como-funciona {
@@ -55,7 +55,8 @@ body {
 .introducao {
     display: flex;
     width: 100%;
-    height: 120vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 .monitoramento-hpc {
@@ -91,7 +92,8 @@ body {
 .conheca-a-plataforma {
     width: 42%;
     min-height: 45px;
-    height: 6%;
+    height: auto;
+    padding: 10px 15px;
     background-color: #215664;
     color: white;
     border: none;
@@ -108,7 +110,7 @@ body {
     color: #42B8C4;
     font-weight: bold;
     font-size: 120%;
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .titulo-projeto {
@@ -134,12 +136,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 48%;
-    height: 92.35%;
+    height: auto;
 }
 
 .ambiente-hpc img {
     width: 100%;
-    height: 55%;
+    height: auto;
+    max-height: 400px;
     object-fit: contain;
 }
 
@@ -157,54 +160,50 @@ body {
 .fluxo-nautilus {
     display: flex;
     width: 100%;
-    height: 350px;
+    height: auto;
+    margin-top: 40px;
 }
 
 .fluxo {
     display: flex;
     width: 25%;
-    height: 85%;
+    height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 15px;
 }
 
 .fluxo img {
     width: 40%;
-    height: 50%;
+    height: auto;
+    max-height: 120px;
     object-fit: contain;
 }
 
 .fluxo div {
     font-weight: bold;
     font-size: 140%;
-    
+    text-align: center;
 }
 
 .fluxo p {
     margin: 5px 0;
+    text-align: center;
 }
 
-/*Como-Funciona*/
+/* Como-Funciona */
 
-.secao-como-funciona {
-    display: flex;
-    width: 100%;
-    min-height: 1vh;
-    background-color: #215664;
-    padding: 80px 0;
-    align-items: center;
-}
 .container-como-funciona {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 250vh;
+    width: 100%;
     max-width: 1600px;
     margin: 0 auto;
     gap: 60px;
-    height: 60%;
+    height: auto;
 }
 
 .coluna-texto {
@@ -250,7 +249,6 @@ body {
     position: relative;
     width: 55%;
     min-height: 520px;
-
 }
 
 .img-principal {
@@ -261,8 +259,6 @@ body {
     border: 1.5px solid #42B8C4;
 }
 
-
-
 .card-nodes {
     position: absolute;
     top: 0;
@@ -270,9 +266,7 @@ body {
     width: 49%;
     border-radius: 16px;
     padding: 12px;
-
 }
-
 
 .card-nodes-container {
     position: absolute;
@@ -285,7 +279,6 @@ body {
     gap: 12px;
     padding: 10px;
 }
-
 
 .texto-nodes {
     width: 35%;
@@ -308,10 +301,9 @@ body {
     margin: 0;
 }
 
-
 .card-plataforma {
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     right: 10%;
     width: 45%;
     background-color: #215664;
@@ -327,10 +319,8 @@ body {
 }
 
 .card-plataforma div {
-    color:#d1d5db ;
+    color:#d1d5db;
 }
-
-
 
 .card-plataforma ul li {
     margin: 5px;
@@ -341,30 +331,34 @@ body {
 }
 
 .rodape-diagrama {
-    position: absolute;
-    bottom: -50px;
     width: 100%;
     display: flex;
-    gap: 50px;
     align-items: center;
-    border-top: 1px solid rgba(66,184,196,0.3);
+    gap: 15px;
+    border-top: 1px solid rgba(66, 184, 196, 0.3);
     padding-top: 10px;
-    left: 50%;
+    box-sizing: border-box;
 }
 
+.rodape-diagrama img {
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+}
 
 .texto-rodape {
     color: #ffffff;
     font-size: 0.75rem;
-    max-width: 150px;
+    line-height: 1.3;
     margin: 0;
+    flex: 1;
 }
 
 .info-infraestrutura {
     position: absolute;
-    bottom: -45px;             /* Alinha na parte inferior da imagem principal */
-    left: -20%;                  /* Alinha à esquerda da imagem principal */
-    width: 20%;               /* Limita a largura para o texto quebrar na linha certa */
+    bottom: -45px;
+    left: -20%;
+    width: 20%;
     display: flex;
     flex-direction: column;
 }
@@ -386,9 +380,11 @@ body {
     opacity: 0.9;
 }
 
+/* SEÇÃO CONTATO */
+
 .secao-contato {
     background-color: #f8fafc;
-    padding: 50px 0;
+    padding: 75px 0;
     width: 100%;
     color: #1e293b;
 }
@@ -403,7 +399,6 @@ body {
     margin: 0 auto;
     gap: 60px;
 }
-
 
 .contato-esquerda {
     width: 48%;
@@ -449,22 +444,21 @@ body {
     font-weight: 700;
 }
 
-
 .cards-diferenciais {
     display: flex;
-    gap: 125px;
+    gap: 30px;
     margin-top: 5%;
 }
 
 .card-diferencial {
-    width: 33%;
+    width: 33.33%;
     display: flex;
     flex-direction: column;
 }
 
 .card-diferencial img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 15px;
 }
 
@@ -483,12 +477,10 @@ body {
     margin: 0;
 }
 
-
 .divisor-vertical {
     width: 1px;
     background-color: #e2e8f0;
 }
-
 
 .contato-direita {
     width: 42%;
@@ -521,7 +513,6 @@ body {
     margin: 25px 0;
 }
 
-
 .lista-contatos {
     display: flex;
     flex-direction: column;
@@ -545,7 +536,10 @@ body {
     font-weight: 500;
 }
 
-
+.secao-footer {
+    display: flex;
+    background-color: #183b45;
+}
 
 /* 
    TABLETS
@@ -559,7 +553,7 @@ body {
 
     .introducao {
         height: auto;
-        min-height: 120vh;
+        min-height: auto;
     }
 
     .monitoramento-hpc {
@@ -567,11 +561,66 @@ body {
     }
 
     .ambiente-hpc p {
-        padding-left: 10%;
+        padding-left: 0;
     }
 
     .conheca-a-plataforma {
         width: 60%;
+    }
+
+    .container-como-funciona {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .coluna-texto,
+    .coluna-diagrama {
+        width: 100%;
+    }
+
+    /* Solução para não quebrar os cards do diagrama em tablets/mobile */
+    .coluna-diagrama {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-principal {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    .card-nodes,
+    .card-nodes-container,
+    .card-plataforma,
+    .rodape-diagrama,
+    .info-infraestrutura {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+
+    .texto-nodes {
+        width: 100%;
+    }
+
+    .container-contato {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contato-esquerda,
+    .contato-direita {
+        width: 100%;
+    }
+
+    .divisor-vertical {
+        display: none;
     }
 
 }
@@ -595,7 +644,7 @@ body {
     .monitoramento-hpc {
         width: 100%;
         height: auto;
-        padding-top: 10%;
+        padding-top: 5%;
         padding-right: 0;
     }
 
@@ -604,8 +653,8 @@ body {
     }
 
     .titulo-principal {
-        font-size: clamp(2rem, 9vw, 3rem);
-        line-height: 1.1;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.15;
     }
 
     .descricao {
@@ -615,18 +664,18 @@ body {
     }
 
     .conheca-a-plataforma {
-        width: 70%;
-        height: 50px;
+        width: 100%;
+        min-height: 48px;
         font-size: 0.95rem;
     }
 
     .sobre-projeto {
-        margin-top: 15vh;
+        margin-top: 40px;
     }
 
     .titulo-projeto {
-        font-size: clamp(2rem, 9vw, 3rem);
-        line-height: 1.1;
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.15;
     }
 
     .separacao-solucao {
@@ -636,7 +685,7 @@ body {
     .ambiente-hpc {
         width: 100%;
         height: auto;
-        margin-top: 10%;
+        margin-top: 30px;
     }
 
     .ambiente-hpc img {
@@ -645,29 +694,57 @@ body {
     }
 
     .ambiente-hpc p {
-        padding: 5% 0 0 0;
+        padding: 15px 0 0 0;
         line-height: 1.5;
     }
 
     .fluxo-nautilus {
         flex-direction: column;
         height: auto;
-        margin-top: 10%;
+        margin-top: 30px;
+        gap: 20px;
     }
 
     .fluxo {
         width: 100%;
-        min-height: 200px;
+        min-height: auto;
     }
 
     .fluxo img {
-        width: 25%;
+        width: 50px;
         height: auto;
     }
 
+    .cards-diferenciais {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card-diferencial {
+        width: 100%;
+    }
+
+    .secao-como-funciona,
+    .secao-contato {
+        padding: 40px 0;
+    }
+
+    .rodape-diagrama {
+        position: relative; /* Solta do posicionamento absoluto em telas pequenas */
+        left: 0;
+        bottom: 0;
+        flex-direction: column; /* Empilha a imagem e o texto no celular */
+        text-align: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+   .rodape-diagrama img {
+        max-width: 100%; /* Permite usar até toda a largura disponível no celular */
+    }
+
+    .texto-rodape {
+        width: 100%;
+    }
+
 }
-
-
-
-
-
