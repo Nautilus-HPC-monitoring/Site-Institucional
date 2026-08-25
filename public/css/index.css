@@ -654,3 +654,19 @@ body{
     font-weight:600;
     line-height:1.4;
 }
+.area-arvore{
+    width:100%;
+    height:95%;
+    position:absolute;
+    top:15%;
+    left:0;
+}
+.img-arvore{
+    position:absolute;
+    height:100%;
+    width:auto;
+    top:30%;
+    left:55%;
+    transform:translateX(-50%);
+    object-fit:contain;
+}
