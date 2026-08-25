@@ -622,7 +622,7 @@ body{
 }
 .impactos{
     width:100%;
-    height:90vh;
+    height:100vh;
     background-color:#F8FBFB;
     position:relative;
     overflow:hidden;
@@ -643,14 +643,14 @@ body{
     display:block;
     margin-top:1vh;
     color:#43AECA;
-    font-size:0.75rem;
+    font-size:0.9rem;
     font-weight:bold;
 }
 .introducao p{
     width:95%;
-    margin-top:4vh;
+    margin-top:2vh;
     color:#111111;
-    font-size:0.7rem;
+    font-size:0.8rem;
     font-weight:600;
     line-height:1.4;
 }
@@ -658,8 +658,8 @@ body{
     width:100%;
     height:95%;
     position:absolute;
-    top:15%;
-    left:0;
+    top:5%;
+    right:5%;
 }
 .img-arvore{
     position:absolute;
@@ -669,4 +669,55 @@ body{
     left:55%;
     transform:translateX(-50%);
     object-fit:contain;
+}
+.caixa-info{
+    position:absolute;
+    width:17vw;
+    min-height:9vh;
+    padding:1.5vh 0.6vw;
+    background-color:#DDF3F5;
+    border:0.08vw solid #43AECA;
+    z-index:5;
+}
+.caixa-info::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:-0.6vh;
+    left:0.5vw;
+    background-color:#8DD9E1;
+    z-index:-1;
+}
+.caixa-info h3{
+    margin:0;
+    color:#43AECA;
+    font-size:0.9rem;
+    font-weight:bold;
+}
+.caixa-info p{
+    margin-top:0.5vh;
+    color:#111111;
+    font-size:0.7rem;
+    line-height:1.3;
+}
+.caixa-energia{
+    top:25%;
+    left:64%;
+}
+.caixa-dados{
+    top: 50%;
+    left:65%;
+}
+.caixa-ociosidade{
+    top:63%;
+    left:30%;
+}
+.caixa-investimento{
+    top:75%;
+    left:65%;
+}
+.caixa-multas{
+    top:90%;
+    left:23%;
 }
