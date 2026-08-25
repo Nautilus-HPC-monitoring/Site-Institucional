@@ -388,13 +388,14 @@ body {
 
 .secao-contato {
     background-color: #f8fafc;
-    padding: 100px 0;
+    padding: 50px 0;
     width: 100%;
     color: #1e293b;
 }
 
 .container-contato {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
     width: 85vw;
@@ -451,8 +452,8 @@ body {
 
 .cards-diferenciais {
     display: flex;
-    gap: 25px;
-    margin-top: auto;
+    gap: 125px;
+    margin-top: 5%;
 }
 
 .card-diferencial {
@@ -462,13 +463,13 @@ body {
 }
 
 .card-diferencial img {
-    width: 65px;
-    height: 65px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 15px;
 }
 
 .card-diferencial h3 {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #0f172a;
     margin: 0 0 10px 0;
@@ -476,7 +477,7 @@ body {
 }
 
 .card-diferencial p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #94a3b8;
     line-height: 1.4;
     margin: 0;
@@ -545,31 +546,6 @@ body {
 }
 
 
-.icone-circulo {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #e0f2fe; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.icone-circulo.grande {
-    width: 68px;
-    height: 68px;
-}
-
-.icone-circulo img {
-    width: 24px;
-    height: 24px;
-}
-
-.icone-circulo.grande img {
-    width: 32px;
-    height: 32px;
-}
 
 /* 
    TABLETS
