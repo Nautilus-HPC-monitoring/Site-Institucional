@@ -721,3 +721,47 @@ body{
     top:90%;
     left:23%;
 }
+/* sessao sobre o projeto*/
+.sobre-projeto{
+    width:100%;
+    height:55vh;
+    background-color:#F8FBFB;
+    position:relative;
+    gap:5vh;
+    margin-bottom: 7%;
+}
+.sobre-conteudo{
+    width:100%;
+    height:100%;
+    display:flex;
+}
+.texto{
+    width:54%;
+    height:100%;
+    padding:5vh 6vw 7vh 5vw;
+}
+.sobre-tag{
+    color:#215664;
+    font-size:0.8rem;
+    font-weight:700;
+    border-top:0.3vh solid #43AECA;
+    padding-top:1vh;
+}
+.texto h2{
+    margin-top:2vh;
+    color:#23343A;
+    font-size:2.0rem;
+    font-weight:500;
+    line-height:1.15;
+}
+.texto h2 strong{
+    color:#08748A;
+    font-weight:700;
+}
+.texto>p{
+    width:88%;
+    margin-top:2vh;
+    color:#667276;
+    font-size:0.7rem;
+    line-height:1.5;
+}
