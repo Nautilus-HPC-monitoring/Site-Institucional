@@ -559,27 +559,31 @@ body {
 
 .infraestrutura {
     width: 100%;
-    height: 61vh;
+    height: 70vh;
     background-color: #E5E5E5;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 7%;
+    margin-top: 5%;
 }
 .infra-container{
-    width: 90%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4vw;
 }
 .cards-infra {
-    width: 65%;
-    display: flex;
-    gap: 0.5vw;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    display: flex;  
+    justify-content: space-between;
 }
 .card-infra {
     width: 32%;
-    height: 54vh;
+    height: 55vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -596,30 +600,29 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.titulo-infra {
-    width: 25%;
+/* .titulo-infra {
+    width: 40%;
+    border: solid 1px blue;
+    height: 100%;
+}
+    */
+
+.card-infra a{
+    text-decoration: none;
+    color: var;
 }
 
-.titulo-infra h2 {
+.container-parceria h2 {
     color: #215664;
     font-size: 2.5rem;
     font-weight: 400;
-    margin: 0;
+} 
+
+.container-parceria{
+    width: 40%;
+    height: 80%;
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    font-family:Arial,sans-serif;
-    background-color:#F8FBFB;
-}
+
 .impactos{
     width:100%;
     height:100vh;
@@ -656,17 +659,17 @@ body{
 }
 .area-arvore{
     width:100%;
-    height:95%;
+    height:100%;
     position:absolute;
-    top:5%;
-    right:5%;
+    top:0;
+    left:0;
 }
 .img-arvore{
     position:absolute;
-    height:100%;
+    height:85%;
     width:auto;
-    top:30%;
-    left:55%;
+    top:15%;
+    left:50%;
     transform:translateX(-50%);
     object-fit:contain;
 }
@@ -702,24 +705,52 @@ body{
     line-height:1.3;
 }
 .caixa-energia{
-    top:25%;
-    left:64%;
+    top:3%;
+    left:52%;
 }
 .caixa-dados{
-    top: 50%;
-    left:65%;
+    top: 25%;
+    left:60%;
 }
 .caixa-ociosidade{
-    top:63%;
-    left:30%;
+    top:40%;
+    left:23%;
 }
 .caixa-investimento{
-    top:75%;
-    left:65%;
+    top:50%;
+    left:60%;
 }
 .caixa-multas{
-    top:90%;
+    top:63%;
     left:23%;
+}
+.valor{
+    position:absolute;
+    color:#215664;
+    font-size:0.9rem;
+    font-weight:bold;
+    white-space:nowrap;
+    z-index:6;
+}
+.valor-energia{
+    top:18%;
+    left:52%;
+}
+.valor-dados{
+    top:42%;
+    left:59%;
+}
+.valor-ociosidade{
+    top:52%;
+    left:34%;
+}
+.valor-investimento{
+    top:64%;
+    left:57%;
+}
+.valor-multas{
+    top:75%;
+    left:36%;
 }
 /* sessao sobre o projeto*/
 .sobre-projeto{
@@ -806,4 +837,13 @@ body{
     color:#748084;
     font-size:0.6rem;
     line-height:1.35;
+}
+.sobre-imagem{
+    width:44%;
+
+}
+.sobre-imagem img{
+    width:100%;
+height: 65vh;
+    object-fit:cover;
 }
