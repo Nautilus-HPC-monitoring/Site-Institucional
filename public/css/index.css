@@ -765,3 +765,45 @@ body{
     font-size:0.7rem;
     line-height:1.5;
 }
+.botao-sobre{
+    width:20vw;
+    height:9vh;
+    margin-top:2.5vh;
+    background-color:white;
+    border:0.1vw solid #D5E2E5;
+    color:#215664;
+    font-size:0.8rem;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 1vw;
+    cursor:pointer;
+}
+.botao-sobre span{
+    font-size:2rem;
+}
+.beneficios{
+    width:95%;
+    display:flex;
+    justify-content:space-between;
+    margin-top:4vh;
+    gap:0vw;
+}
+.beneficio{
+    width:32%;
+    display:flex;
+    gap:0.6vw;
+    display: flex;
+    justify-content: space-between;
+}
+.beneficio h3{
+    color:#215664;
+    font-size:0.8rem;
+    margin-bottom:0.5vh;
+}
+.beneficio p{
+    color:#748084;
+    font-size:0.6rem;
+    line-height:1.35;
+}
