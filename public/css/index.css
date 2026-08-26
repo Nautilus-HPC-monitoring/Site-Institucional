@@ -573,6 +573,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10%;
 }
 .cards-infra {
     width: 60%;
@@ -922,4 +923,17 @@ height: 65vh;
     color:white;
     font-size:0.7rem;
     margin-top:1vh;
+}
+.linha-beneficio{
+    width:3vw;
+    height:0.2vh;
+    background-color:#43C5D6;
+    margin-top:1vh;
+}
+.beneficio-controle p{
+    width:90%;
+    color:#74878D;
+    font-size:0.8rem;
+    line-height:1.5;
+    margin-top:2vh;
 }
