@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
 }
+
 main {
     padding: 40px;
 }
@@ -26,7 +28,6 @@ main {
     overflow: hidden;
 }
 
-
 #sidebar:hover {
     width: 260px;
 }
@@ -35,11 +36,19 @@ main {
     padding: 12px;
 }
 
+
 #logo_sidebar {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+
+#sidebar:hover #logo_sidebar {
     width: 70px;
     height: 65px;
-    object-fit: cover;
-
+    object-fit: contain;
 }
 
 #logo {
@@ -55,6 +64,12 @@ main {
     opacity: 0;
     white-space: nowrap;
     transition: opacity 0.3s ease;
+}
+
+#logo_infos span {
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
 #side_items {
@@ -107,7 +122,6 @@ main {
     font-size: 25px;
     transition: opacity 0.3s ease;
 }
-
 
 #sidebar:hover .item-description {
     width: auto;
