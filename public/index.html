@@ -21,7 +21,11 @@
 
       <div class="navbar_left">
 
-        <a href="#" class="navbar_logo">
+        <button class="navbar_menu" id="btnMenu" aria-label="Abrir menu">
+          ☰
+        </button>
+
+        <a href="./index.html" class="navbar_logo">
           <img src="./assets/img/logo.png" alt="Nautilus Logo">
           Nautilus
         </a>
@@ -29,32 +33,89 @@
         <nav class="navbar_nav">
           <a href="#">
             Serviço como solução
-            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            <span class="navbar_setas">
+              <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+              <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            </span>
           </a>
 
           <a href="#">
             Equipe
-            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            <span class="navbar_setas">
+              <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+              <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            </span>
           </a>
 
           <a href="#">
             Valores
-            <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
-            <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            <span class="navbar_setas">
+              <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+              <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+            </span>
           </a>
         </nav>
 
       </div>
 
       <div class="navbar_actions">
-        <button>Login</button>
-        <button>Cadastre-se</button>
+        <button><a href="./login.html">Login</a></button>
+        <button><a href="./cadastro.html">Cadastre-se</a></button>
       </div>
 
     </div>
   </header>
+
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar_topo">
+      <a href="#" class="sidebar_logo">
+        <img src="./assets/img/logo.png" alt="Nautilus Logo">
+        Nautilus
+      </a>
+
+      <button class="sidebar_fechar" id="btnFechar">
+        ✕
+      </button>
+    </div>
+
+    <nav class="sidebar_nav">
+
+      <a href="#">
+        <span>Serviço como solução</span>
+
+        <span class="sidebar_setas">
+          <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+          <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+        </span>
+      </a>
+
+      <a href="#">
+        <span>Equipe</span>
+
+        <span class="sidebar_setas">
+          <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+          <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+        </span>
+      </a>
+
+      <a href="#">
+        <span>Valores</span>
+
+        <span class="sidebar_setas">
+          <img src="./assets/icon/seta_direita_azul_qd.svg" alt="" class="seta_normal">
+          <img src="./assets/icon/seta_direita_azul_claro_qd.svg" alt="" class="seta_hover">
+        </span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar_actions">
+      <button><a href="./login.html">Login</a></button>
+      <button><a href="./cadastro.html">Cadastre-se</a></button>
+    </div>
+
+  </aside>
 
   <main>
     <section class="hero_home container">
@@ -145,7 +206,144 @@
       </div>
 
     </section>
+    <section class="infraestrutura">
+<div class="infra-container container">
+    <div class="container-parceria">
+        <h2>Infraestrutura<br>Parceira</h2>
+    </div>
 
+    <div class="cards-infra">
+
+        <div class="card-infra">
+            <img src="./assets/img/home/plataforma_petroleo.png" alt="Plataforma">
+
+            <div class="conteudo-card">
+                <p>
+                    Conheça como funciona a infraestrutura da Petrobras
+                </p>
+
+                <a href="#">
+                    Abrir infraestrutura ↗
+                </a>
+            </div>
+        </div>
+
+
+        <div class="card-infra">
+            <img src="./assets/img/home/harpia.png" alt="Harpia">
+
+            <div class="conteudo-card">
+                <p>
+                    Conheça o Harpia
+                </p>
+
+                <a href="#">
+                    Conhecer ↗
+                </a>
+            </div>
+        </div>
+
+
+        <div class="card-infra">
+            <img src="./assets/img/home/petrobras.png" alt="Petrobras">
+
+            <div class="conteudo-card">
+                <p>
+                    Cenpes
+                </p>
+
+                <a href="#">
+                    Conhecer ↗
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+<section class="sobre-projeto">
+    <div class="sobre-conteudo">
+        <div class="texto">
+            <span class="sobre-tag">SOBRE O PROJETO</span>
+            <h2>Infraestruturas complexas<br>exigem uma <strong>visão mais simples.</strong></h2>
+            <p>O NAUTILUS nasceu para tornar o monitoramento de ambientes de alta performance mais claro e acessível.<br>
+               Centralizamos informações essenciais da infraestrutura para que equipes tenham maior visibilidade sobre seus
+                recursos e possam tomar decisões com mais agilidade.</p>
+            <p>Da acompanhamento dos recursos à identificação de utilização e riscos, nossa solução conecta monitoramento eficiente à gestão em uma única plataforma.</p>
+            <button class="botao-sobre">Conheça nossa solução <span>→</span></button>
+            <div class="beneficios">
+                <div class="beneficio">
+                    <div>
+                        <h3>Visibilidade completa</h3>
+                        <p>Acompanhe seus ambientes, servidores e recursos em um único lugar.</p>
+                    </div>
+                </div>
+                <div class="beneficio">
+                    <div>
+                        <h3>Alertas inteligentes</h3>
+                        <p>Identifique anomalias e receba alertas antes que os problemas aconteçam.</p>
+                    </div>
+                </div>
+                <div class="beneficio">
+
+                    <div>
+                        <h3>Gestão eficiente</h3>
+                        <p>Decisões estratégicas baseadas em dados claros de funcionamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sobre-imagem">
+            <img src="./assets/img/home/dataCenter.png" alt="Data center">
+        </div>
+    </div>
+</section>
+<section class="impactos">
+
+    <div class="introducao">
+        <h1>O que você não monitora<br>também gera custos.</h1>
+
+        <span>VALOR DO SERVIÇO</span>
+
+        <p>
+            O valor de um supercomputador se concentra no<br>
+            processamento dos dados massivos, o monitoramento<br>
+            de RAM e CPU são cruciais para que se possa determinar
+            o rendimento do supercomputador.
+        </p>
+    </div>
+
+
+   <div class="area-arvore">
+    <img src="./assets/img/home/arvore.png" class="img-arvore" alt="">
+    <div class="caixa-info caixa-energia">
+        <h3>ENERGIA</h3>
+        <p>Sem controle da eficiência energética (PUE), a refrigeração trabalha no escuro, gastando muito mais do que o necessário.</p>
+    </div>
+    <span class="valor valor-energia">+R$ 500 MIL/ano</span>
+    <div class="caixa-info caixa-dados">
+        <h3>DADOS</h3>
+        <p>Sem ter controle sobre o fluxo de dados, se paga por armazenamento inutilizado e taxas de egress que podem ser evitadas.</p>
+    </div>
+    <span class="valor valor-dados">+R$ 1.750.000 MIL</span>
+    <div class="caixa-info caixa-ociosidade">
+        <h3>OCIOSIDADE</h3>
+        <p>Os gastos são mais ou menos assim, nesse pique.</p>
+    </div>
+    <span class="valor valor-ociosidade">R$ 24.000,00</span>
+    <div class="caixa-info caixa-investimento">
+        <h3>INVESTIMENTO</h3>
+        <p>Os gastos são mais ou menos assim, nesse pique.</p>
+    </div>
+    <span class="valor valor-investimento">R$ 24.000,00</span>
+    <div class="caixa-info caixa-multas">
+        <h3>MULTAS</h3>
+        <p>Os gastos são mais ou menos assim, nesse pique.</p>
+    </div>
+    <span class="valor valor-multas">R$ 24.000,00</span>
+</div>
+
+</section>
   </main>
 </body>
 
