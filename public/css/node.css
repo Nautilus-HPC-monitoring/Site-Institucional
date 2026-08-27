@@ -12,6 +12,11 @@ body {
     display: flex;
 }
 
+main {
+    flex: 1;
+    padding: 40px;
+}
+
 
  /*Sidebar */
 #sidebar {
@@ -145,10 +150,6 @@ body {
 
 /*Header*/
 
-main {
-    flex: 1;
-    padding: 40px;
-}
 
 #main-container {
     flex: 1;
@@ -201,4 +202,6 @@ main {
     font-weight: 500;
     color: #334155;
 }
+
+/* Página e Títulos */
 
