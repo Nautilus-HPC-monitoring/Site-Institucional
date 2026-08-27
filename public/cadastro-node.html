@@ -3,14 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/node.css">
     <title>Document</title>
 </head>
 <body>
-    <section>
-        <nav>
+    
+        <nav id="sidebar">
+            <div id="sidebar_content">
 
+                <div id="logo">
+                <img src="./assets/img/logo.png" id="logo_sidebar" alt="">
+            </div>
+            <ul id="side_items">
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span class="item-description">
+                            Visão Geral
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-database"></i>
+                        <span class="item-description">
+                            Ambientes
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="item-description">
+                            Clusters
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item active">
+                    <a href="#">
+                        <i class="fa-solid fa-memory"></i>
+                        <span class="item-description">
+                            Nodes
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+            
+
+            <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span class="item-description">
+                            Configurações
+                        </span>
+                    </a>
+                </li>
         </nav>
-        <div>
+        <main>
+             <div>
             <a href="">Voltar para nodes</a>
 
             <h2>Cadastrar novo node</h2>
@@ -36,7 +91,9 @@
             </div>
             
         </div>
-    </section>
+        </main>
+       
+    
 </body>
 <script>
     sessionStorage
