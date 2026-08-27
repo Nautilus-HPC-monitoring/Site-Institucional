@@ -205,3 +205,152 @@ main {
 
 /* Página e Títulos */
 
+
+.page-content {
+    max-width: 1000px;
+}
+
+.back-link {
+    color: #0E5E75;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.page-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-top: 12px;
+}
+
+.page-subtitle {
+    color: #64748B;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.form-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E2E8F0;
+}
+
+.form-section {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ECFDF5;
+    color: #0D9488;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.section-body {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.section-subtitle {
+    font-size: 13px;
+    color: #64748B;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.form-grid.align-center {
+    align-items: flex-end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.required {
+    color: #ef4444;
+}
+
+input[type="text"],
+select,textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #0f172A;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94A3B8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0E5E75;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: "⌵";
+    position: absolute;
+    right: 14px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #64748B;
+    font-weight: bold;
+}
