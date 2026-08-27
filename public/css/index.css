@@ -954,4 +954,20 @@ height: 65vh;
     border-bottom:0.15vw solid #43AECA;
     padding-bottom:0.6vh;
 }
-
+.vamos-texto h2{
+    margin-top:4vh;
+    color:#092F3A;
+    font-size:2.3rem;
+    font-weight:700;
+    line-height:1.2;
+}
+.vamos-texto h2 strong{
+    color:#0B6C80;
+}
+.vamos-texto p{
+    width:75%;
+    margin-top:2vh;
+    color:#667276;
+    font-size:1.2rem;
+    line-height:1.0;
+}
