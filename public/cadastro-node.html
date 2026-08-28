@@ -9,65 +9,98 @@
 </head>
 <body>
     
+    <div class="mobile-header">
+        <button id="open-sidebar-btn" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <img src="./assets/img/logo.png" alt="Logo" class="mobile-header-logo">
+    </div>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="mobile-sidebar" id="mobileSidebar">
+        <div class="mobile-sidebar-header">
+            <div class="mobile-logo">
+                <img src="./assets/img/logo.png" alt="Nautilus Logo">
+                <span>NAUTILUS</span>
+            </div>
+            <button id="close-sidebar-btn" aria-label="Fechar menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="mobile-sidebar-items">
+            <li class="nav-item">
+                <a href="#"><i class="fa-solid fa-border-all"></i> <span>Visão Geral</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><i class="fa-solid fa-database"></i> <span>Ambientes</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><i class="fa-solid fa-chart-line"></i> <span>Clusters</span></a>
+            </li>
+            <li class="nav-item active">
+                <a href="#"><i class="fa-solid fa-memory"></i> <span>Nodes</span></a>
+            </li>
+        </ul>
+
+        <div class="mobile-sidebar-bottom">
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Configurações</span>
+            </a>
+        </div>
+    </aside>
+
         <nav id="sidebar">
             <div id="sidebar_content">
-
                 <div id="logo">
-                <img src="./assets/img/logo.png" id="logo_sidebar" alt="">
-                <p id="logo_infos">
-                    <span class="item-description">
-                        NAUTILUS
-                    </span>
-                </p>
+                    <img src="./assets/img/logo.png" id="logo_sidebar" alt="">
+                    <p id="logo_infos">
+                        <span class="item-description">NAUTILUS</span>
+                    </p>
+                </div>
+
+                <ul id="side_items">
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-border-all"></i>
+                            <span class="item-description">Visão Geral</span>
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-database"></i>
+                            <span class="item-description">Ambientes</span>
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="item-description">Clusters</span>
+                        </a>
+                    </li>
+
+                    <li class="side-item active">
+                        <a href="#">
+                            <i class="fa-solid fa-memory"></i>
+                            <span class="item-description">Nodes</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <ul id="side_items">
+
+            
+            <ul id="side_bottom">
                 <li class="side-item">
                     <a href="#">
-                        <i class="fa-solid fa-border-all"></i>
-                        <span class="item-description">
-                            Visão Geral
-                        </span>
-                    </a>
-                </li>
-
-                <li class="side-item">
-                    <a href="#">
-                        <i class="fa-solid fa-database"></i>
-                        <span class="item-description">
-                            Ambientes
-                        </span>
-                    </a>
-                </li>
-
-                <li class="side-item">
-                    <a href="#">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <span class="item-description">
-                            Clusters
-                        </span>
-                    </a>
-                </li>
-
-                <li class="side-item active">
-                    <a href="#">
-                        <i class="fa-solid fa-memory"></i>
-                        <span class="item-description">
-                            Nodes
-                        </span>
+                        <i class="fa-solid fa-sliders"></i>
+                        <span class="item-description">Configurações</span>
                     </a>
                 </li>
             </ul>
-            </div>
-            
-
-            <li class="side-item">
-                    <a href="#">
-                        <i class="fa-solid fa-sliders"></i>
-                        <span class="item-description">
-                            Configurações
-                        </span>
-                    </a>
-                </li>
         </nav>
         <div id="main-container">
             <header class="top-header">
@@ -221,7 +254,7 @@
     
 </body>
 <script>
-    sessionStorage
+
 </script>
 </html>
 
