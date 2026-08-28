@@ -579,6 +579,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10%;
 }
 .cards-infra {
     width: 60%;
@@ -852,4 +853,164 @@ body {
     width:100%;
 height: 65vh;
     object-fit:cover;
+}
+.controle-infra{
+    width:100%;
+    height:75vh;
+    background-color:#001E26;
+    display:flex;
+    padding:7vh 6vw;
+    box-sizing:border-box;
+}
+.esquerda{
+    width:48%;
+}
+.tag{
+    color:#43AECA;
+    font-size:0.8rem;
+    font-weight:600;
+    border-bottom:0.15vw solid #43AECA;
+    padding-bottom:0.4vh;
+}
+.esquerda h2{
+    margin-top:4vh;
+    color:white;
+    font-size:2.1rem;
+    font-weight:400;
+    line-height:1.2;
+}
+.esquerda h2 strong{
+    color:#12C7E5;
+    font-weight:700;
+}
+.esquerda p{
+    width:80%;
+    margin-top:2vh;
+    color:#87979C;
+    font-size:0.75rem;
+    line-height:1.5;
+}
+.esquerda img{
+    width:70%;
+    height:25vh;
+    margin-top:4vh;
+    object-fit:cover;
+    border-radius:1vw;
+}
+.direita{
+    width:52%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr; 
+
+}
+/*grid serve para fazer os quadradinhos ao lado direito */
+.beneficio-controle{
+    padding:4vh 3vw;
+    border-bottom:0.05vw solid #15343C;
+    border-left:0.05vw solid #15343C;
+}
+/* linhas dos quadrados*/
+.beneficio-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.numero{
+    color:#43C5D6;
+    font-size:2.5rem;
+    font-weight:700;
+}
+.beneficio-topo i{
+    color:#43C5D6;
+    font-size:1.3rem;
+}
+.beneficio-controle h3{
+    color:white;
+    font-size:0.7rem;
+    margin-top:1vh;
+}
+.linha-beneficio{
+    width:3vw;
+    height:0.2vh;
+    background-color:#43C5D6;
+    margin-top:1vh;
+}
+.beneficio-controle p{
+    width:90%;
+    color:#74878D;
+    font-size:0.8rem;
+    line-height:1.5;
+    margin-top:2vh;
+}
+.vamos-juntos{
+    width:100%;
+    height:65vh;
+    background-color:#F8FBFB;
+    display:flex;
+}
+.vamos-texto{
+    width:60%;
+    padding:9vh 5vw 6vh 8vw;
+}
+.vamos-juntos-texto{
+    color:#215664;
+    font-size:0.6rem;
+    font-weight:700;
+    border-bottom:0.15vw solid #43AECA;
+    padding-bottom:0.6vh;
+}
+.vamos-texto h2{
+    margin-top:4vh;
+    color:#092F3A;
+    font-size:2.3rem;
+    font-weight:700;
+    line-height:1.2;
+}
+.vamos-texto h2 strong{
+    color:#0B6C80;
+}
+.vamos-texto p{
+    width:75%;
+    margin-top:2vh;
+    color:#667276;
+    font-size:1.2rem;
+    line-height:1.0;
+}
+.vamos-botoes{
+    display:flex;
+    gap:1vw;
+    margin-top:4vh;
+}
+.vamos-botoes button{
+    height:5.5vh;
+    padding:0 1.5vw;
+    border-radius:0.3vw;
+    font-size:0.9rem;
+    font-weight:600;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:1vw;
+}
+.botao-principal{
+    background-color:#0B6C80;
+    color:white;
+    border:0;
+}
+.botao-secundario{
+    background-color:white;
+    color:#215664;
+    border:0.08vw solid #DCE5E7;
+}
+.vamos-imagem{
+    width:40%;
+    height:100%;
+    margin-top:4%;
+}
+.vamos-imagem img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 3vw 3vw 0vw 0vw;
 }
