@@ -84,21 +84,23 @@ body {
     padding-bottom: 4%;
 }
 
-.conheca-a-plataforma {
+.conheca-nos {
     width: 42%;
     min-height: 45px;
     height: auto;
     padding: 10px 15px;
     background-color: var(--cor-secundaria);
-    color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
 }
 
-.conheca-a-plataforma:active {
+.conheca-nos:active {
     background-color: #183b45;
+}
+
+.escrita-sobre-nos-botao{
+    color: white;
 }
 
 .sobre-projeto {
@@ -515,12 +517,13 @@ body {
 }
 
 .espaco-extra {
-    margin: 25px 0;
+    margin-left: 25px 0;
 }
 
 .lista-contatos {
     display: flex;
     flex-direction: column;
+    margin-left: 3%;
 }
 
 .item-contato {
