@@ -14,10 +14,6 @@ body {
     font-family: 'Exo 2', sans-serif;
 }
 
-/* 
-   ESTRUTURA DE SEÇÕES E CONTAINER
-*/
-
 .container {
     display: flex;
     flex-direction: column;
@@ -29,14 +25,14 @@ body {
 
 .secao-solucao-nautilus {
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
 }
 
 .secao-como-funciona {
     display: flex;
     width: 100%;
     height: auto;
-    background-color: #215664;
+    background-color: var(--cor-secundaria);
     flex-direction: column;
     padding: 80px 0;
     align-items: center;
@@ -68,7 +64,7 @@ body {
 }
 
 .titulo-solucao {
-    color: #42B8C4;
+    color: var(--cor-primaria);
     font-weight: bold;
     font-size: 120%;
     padding-top: 5%;
@@ -76,11 +72,11 @@ body {
 
 .titulo-principal {
     font-size: clamp(2rem, 2.7vw, 3.4rem);
-    color: #215664;
+    color: var(--cor-secundaria);
 }
 
 .azul-claro {
-    color: #42B8C4;
+    color: var(--cor-primaria);
 }
 
 .descricao {
@@ -93,7 +89,7 @@ body {
     min-height: 45px;
     height: auto;
     padding: 10px 15px;
-    background-color: #215664;
+    background-color: var(--cor-secundaria);
     color: white;
     border: none;
     border-radius: 5px;
@@ -106,7 +102,7 @@ body {
 }
 
 .sobre-projeto {
-    color: #42B8C4;
+    color: var(--cor-primaria);
     font-weight: bold;
     font-size: 120%;
     margin-top: 10vh;
@@ -214,7 +210,7 @@ body {
 }
 
 .subtitulo-como-funciona {
-    color: #42B8C4;
+    color: var(--cor-primaria);
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 1.5px;
@@ -224,20 +220,20 @@ body {
 .linha-decorativa {
     width: 30px;
     height: 3px;
-    background-color: #42B8C4;
+    background-color: var(--cor-primaria);
     margin: 10px 0 25px 0;
 }
 
 .coluna-texto h2 {
     font-size: clamp(2.2rem, 2.7vw, 3.5rem);
     font-weight: 300; 
-    color: #ffffff;
+    color: var(--cor-branco);
     line-height: 1.15;
     margin: 0 0 50px 0;
 }
 
 .descricao-como-funciona {
-    color: #ffffff;
+    color: var(--cor-branco);
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
@@ -256,7 +252,7 @@ body {
     height: 50%;
     object-fit: cover;
     border-radius: 16px;
-    border: 1.5px solid #42B8C4;
+    border: 1.5px solid var(--cor-primaria);
 }
 
 .card-nodes {
@@ -287,7 +283,7 @@ body {
 }
 
 .texto-nodes strong {
-    color: #42B8C4;
+    color: var(--cor-primaria);
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     margin-bottom: 4px;
@@ -305,8 +301,8 @@ body {
     bottom: 100px;
     width: 45%;
     height: 120px;
-    background-color: #215664;
-    border: 1px solid #42B8C4;
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-primaria);
     border-radius: 12px;
     padding: 12px;
     display: flex;
@@ -315,7 +311,7 @@ body {
 }
 
 .card-plataforma strong {
-    color: #42B8C4;
+    color: var(--cor-primaria);
 }
 
 .card-plataforma div {
@@ -356,7 +352,7 @@ body {
 }
 
 .texto-rodape {
-    color: #ffffff;
+    color: var(--cor-branco);
     font-size: 0.75rem;
     line-height: 1.3;
     margin: 0;
@@ -373,7 +369,7 @@ body {
 }
 
 .info-infraestrutura strong {
-    color: #42B8C4;
+    color: var(--cor-primaria);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.5px;
