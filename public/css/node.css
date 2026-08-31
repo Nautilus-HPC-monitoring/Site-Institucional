@@ -294,6 +294,11 @@ main {
     align-items: flex-end;
 }
 
+.endereco-grid {
+    grid-template-columns:
+        minmax(120px, 0.55fr) minmax(240px, 1.65fr) minmax(180px, 0.9fr);
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -304,7 +309,7 @@ main {
     grid-column: 1 / -1;
 }
 
-.label {
+label {
     font-size: 13px;
     font-weight: 600;
     color: #1e293b;

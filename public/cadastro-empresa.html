@@ -8,7 +8,7 @@
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/node.css">
-    <title>Nautilus - Cadastro Node</title>
+    <title>Nautilus - Cadastro Empresa</title>
 </head>
 
 <body>
@@ -43,10 +43,10 @@
             <li class="nav-item">
                 <a href="#"><i class="fa-solid fa-chart-line"></i> <span>Clusters</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a href="./cadastro-node.html"><i class="fa-solid fa-memory"></i> <span>Nodes</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="./cadastro-empresa.html"><i class="fa-solid fa-building"></i> <span>Empresas</span></a>
             </li>
         </ul>
@@ -90,14 +90,14 @@
                     </a>
                 </li>
 
-                <li class="side-item active">
+                <li class="side-item">
                     <a href="./cadastro-node.html">
                         <i class="fa-solid fa-memory"></i>
                         <span class="item-description">Nodes</span>
                     </a>
                 </li>
 
-                <li class="side-item">
+                <li class="side-item active">
                     <a href="./cadastro-empresa.html">
                         <i class="fa-solid fa-building"></i>
                         <span class="item-description">Empresas</span>
@@ -126,90 +126,95 @@
             </div>
         </header>
         <main class="page-content">
-            <a href="#" class="back-link">&larr; Voltar para nodes</a>
-            <h1 class="page-title">
-                Cadastrar novo node
-            </h1>
-            <p class="page-subtitle">
-                Adicione um novo recurso de processamento à infraestrutura monitorada.
-            </p>
+            <a href="#" class="back-link">&larr; Voltar para empresas</a>
+            <h1 class="page-title">Cadastrar nova empresa</h1>
+            <p class="page-subtitle">Adicione uma nova empresa ao sistema de gerenciamento.</p>
 
             <form class="form-card">
                 <div class="form-section">
-                    <div class="step-badge">
-                        01
-                    </div>
+                    <div class="step-badge">01</div>
                     <div class="section-body">
-                        <h2 class="section-title">
-                            Identificação
-                        </h2>
-                        <p class="section-subtitle">
-                            Informações utilizadas para identificar o node.
-                        </p>
+                        <h2 class="section-title">Dados da empresa</h2>
+                        <p class="section-subtitle">Informações básicas de registro da empresa.</p>
 
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>
-                                    Hostname
-                                </label>
-                                <input type="text" placeholder="Ex.: node-compute-01">
+                        <div class="form-grid empresa-identificacao">
+                            <div class="form-group full-width">
+                                <label for="razao-social">Razão Social <span class="required">*</span></label>
+                                <input id="razao-social" name="razaoSocial" type="text"
+                                    placeholder="Ex.: Nautilus Tecnologia S.A." required>
                             </div>
 
                             <div class="form-group">
-                                <label>
-                                    Endereço IP
-                                    <span class="required">
-                                        *
-                                    </span>
-                                </label>
-                                <input type="text" placeholder="Ex.: 192.168.1.10">
+                                <label for="cnpj">CNPJ <span class="required">*</span></label>
+                                <input id="cnpj" name="cnpj" type="text" inputmode="numeric"
+                                    placeholder="Ex.: 00.000.000/0001-00" required>
                             </div>
 
                             <div class="form-group">
-                                <label>
-                                    Sistema Operacional
-                                    <span class="required">
-                                        *
-                                    </span>
-                                </label>
+                                <label for="data-registro">Data de Registro <span class="required">*</span></label>
+                                <input id="data-registro" name="dataRegistro" type="text" inputmode="numeric"
+                                    placeholder="Ex.: DD/MM/AAAA" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="step-badge">02</div>
+                    <div class="section-body">
+                        <h2 class="section-title">Endereço</h2>
+                        <p class="section-subtitle">Localização da sede da empresa.</p>
+
+                        <div class="form-grid endereco-grid">
+                            <div class="form-group full-width">
+                                <label for="logradouro">Logradouro <span class="required">*</span></label>
+                                <input id="logradouro" name="logradouro" type="text"
+                                    placeholder="Ex.: Avenida Paulista" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="numero">Número <span class="required">*</span></label>
+                                <input id="numero" name="numero" type="text" inputmode="numeric"
+                                    placeholder="Ex.: 1000" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cidade">Cidade <span class="required">*</span></label>
+                                <input id="cidade" name="cidade" type="text" placeholder="Ex.: São Paulo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="estado">Estado <span class="required">*</span></label>
                                 <div class="select-wrapper">
-                                    <select>
-                                        <option value="" disabled selected>Ex.: Linux</option>
-                                        <option value="linux">Linux</option>
-                                        <option value="windows">Windows</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>
-                                    Cluster
-                                    <span class="required">
-                                        *
-                                    </span>
-                                </label>
-                                <div class="select-wrapper">
-                                    <select>
-                                        <option value="" disabled selected>Ex.: Login node</option>
-                                        <option value="node">Login node</option>
-                                        <option value="compute">Compute</option>
-                                        <option value="storage">Storage node</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    Status
-                                    <span class="required">
-                                        *
-                                    </span>
-                                </label>
-                                <div class="select-wrapper">
-                                    <select>
-                                        <option value="" disabled selected>Ex.: Ativo, Inativo, Manutenção</option>
-                                        <option value="manutencao">Manutenção</option>
-                                        <option value="ativo">Ativo</option>
-                                        <option value="Inativo">Inativo</option>
+                                    <select id="estado" name="estado" required>
+                                        <option value="" disabled selected>Selecione o estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
                                     </select>
                                 </div>
                             </div>
@@ -218,47 +223,22 @@
                 </div>
 
                 <div class="form-section">
-                    <div class="step-badge">
-                        02
-                    </div>
-                    <div class="section-body">
-                        <h2 class="section-title">Localização na infraestrutura</h2>
-                        <p class="section-subtitle">Selecione o cluster onde o node está inserido.</p>
-
-                        <div class="form-grid align-center">
-                            <div class="form-group">
-                                <label>Cluster <span class="required">*</span></label>
-                                <div class="select-wrapper">
-                                    <select>
-                                        <option value="" disabled selected>Selecione um cluster</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="info-alert">
-                                <span class="alert-icon">ⓘ</span>
-                                <span>O ambiente será definido automaticamente com base no cluster selecionado.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-section">
-                    <div class="step-badge">03</div>
+                        <div class="step-badge">03</div>
                     <div class="section-body">
                         <h2 class="section-title">Observações (opcional)</h2>
-                        <p class="section-subtitle">Informações adicionais sobre o node.</p>
+                        <p class="section-subtitle">Informações adicionais sobre a empresa.</p>
 
                         <div class="form-group full-width">
                             <textarea
-                                placeholder="Ex: Local físico, rack, posição, observações relevantes..."></textarea>
+                                id="observacoes" name="observacoes"
+                                placeholder="Ex.: Horário de funcionamento, contatos principais, observações relevantes..."></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-actions">
                     <button type="button" class="btn btn-secondary">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Cadastrar node</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar empresa</button>
                 </div>
             </form>
         </main>
