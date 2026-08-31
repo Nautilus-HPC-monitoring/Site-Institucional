@@ -3,8 +3,10 @@ body {
 }
 
 .container {
+    --container-padding: clamp(80px, 8.33vw, 160px);
+
     width: 100%;
-    padding-inline: clamp(80px, 8.33vw, 160px);
+    padding-inline: var(--container-padding);
     margin-inline: auto;
 }
 
@@ -450,8 +452,8 @@ body {
 .texto {
     width: 100%;
 
-    padding:
-        clamp(50px, 5vw, 80px) clamp(40px, 5vw, 80px);
+    padding-block: clamp(50px, 5vw, 80px);
+    padding-right: clamp(32px, 4vw, 64px);
 }
 
 .sobre-tag {
@@ -613,7 +615,7 @@ body {
     width: 27%;
     position: absolute;
     top: 8%;
-    left: 5%;
+    left: var(--container-padding);
 }
 
 .introducao h1 {
@@ -641,11 +643,11 @@ body {
 }
 
 .area-arvore {
-    width: 100%;
+    width: calc(100% - var(--container-padding) - var(--container-padding));
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: var(--container-padding);
 }
 
 .img-arvore {
@@ -723,7 +725,7 @@ body {
     color: var(--cor-secundaria);
     font-size: 4rem;
     font-weight: bold;
-    var(--cor-branco)-space: nowrap;
+    white-space: nowrap;
     z-index: 6;
 }
 
@@ -757,7 +759,7 @@ body {
     height: 75vh;
     background-color: #001E26;
     display: flex;
-    padding: 7vh 6vw;
+    padding-block: 7vh;
     box-sizing: border-box;
 }
 
@@ -787,16 +789,16 @@ body {
 }
 
 .esquerda p {
-    width: 80%;
+    width: 90%;
     margin-top: 2vh;
     color: #87979C;
-    font-size: 0.75rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .esquerda img {
-    width: 70%;
-    height: 25vh;
+    width: 85%;
+    height: 30vh;
     margin-top: 4vh;
     object-fit: cover;
     border-radius: 1vw;
@@ -847,10 +849,10 @@ body {
 }
 
 .beneficio-controle p {
-    width: 90%;
+    width: 100%;
     color: #74878D;
-    font-size: 0.8rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
     margin-top: 2vh;
 }
 
@@ -864,7 +866,7 @@ body {
 
 .vamos-texto {
     width: 60%;
-    padding: clamp(60px, 8vh, 90px) 5vw clamp(50px, 6vh, 70px) 8vw;
+    padding: clamp(60px, 8vh, 90px) 5vw clamp(50px, 6vh, 70px) 0;
 }
 
 .vamos-juntos-texto {
@@ -1084,7 +1086,8 @@ body {
     }
 
     .sobre-projeto .texto {
-        padding: clamp(44px, 5vw, 64px) clamp(32px, 4vw, 52px);
+        padding-block: clamp(44px, 5vw, 64px);
+        padding-inline: 0 clamp(28px, 4vw, 52px);
     }
 
     .sobre-projeto .sobre-imagem img {
@@ -1094,7 +1097,7 @@ body {
     .controle-infra {
         height: auto;
         min-height: 680px;
-        padding: clamp(56px, 7vw, 80px) clamp(40px, 6vw, 72px);
+        padding-block: clamp(56px, 7vw, 80px);
     }
 
     .esquerda {
@@ -1107,7 +1110,7 @@ body {
 
     .esquerda p,
     .beneficio-controle p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .vamos-juntos {
@@ -1116,7 +1119,8 @@ body {
 
     .vamos-texto {
         width: 58%;
-        padding-inline: clamp(40px, 6vw, 72px);
+        padding-left: 0;
+        padding-right: clamp(28px, 4vw, 52px);
     }
 
     .vamos-texto h2 {
@@ -1132,7 +1136,9 @@ body {
 @media (max-width: 990px) {
 
     .container {
-        padding-inline: clamp(24px, 5vw, 40px);
+        --container-padding: clamp(24px, 5vw, 40px);
+
+        padding-inline: var(--container-padding);
     }
 
     .hero_home {
@@ -1199,7 +1205,7 @@ body {
     }
 
     .infra-container {
-        width: min(850px, calc(100% - 64px));
+        width: 100%;
 
         grid-template-columns: 1fr;
 
@@ -1234,7 +1240,8 @@ body {
     }
 
     .sobre-projeto .texto {
-        padding: clamp(44px, 7vw, 72px) clamp(28px, 7vw, 64px);
+        padding-block: clamp(44px, 7vw, 72px);
+        padding-inline: 0;
     }
 
     .sobre-projeto .texto h2,
@@ -1268,12 +1275,12 @@ body {
 
     .esquerda p {
         width: min(100%, 680px);
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .esquerda img {
-        width: min(100%, 720px);
-        height: clamp(280px, 45vw, 400px);
+        width: min(100%, 780px);
+        height: clamp(320px, 48vw, 440px);
         border-radius: 12px;
     }
 
@@ -1293,7 +1300,7 @@ body {
 
     .beneficio-controle p {
         width: 100%;
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .linha-beneficio {
@@ -1307,7 +1314,7 @@ body {
 
     .vamos-texto {
         width: 100%;
-        padding: clamp(52px, 8vw, 72px) clamp(32px, 7vw, 64px);
+        padding: clamp(52px, 8vw, 72px) 0;
     }
 
     .vamos-texto h2,
@@ -1316,21 +1323,23 @@ body {
     }
 
     .vamos-imagem {
-        width: calc(100% - clamp(32px, 7vw, 64px));
+        width: 100%;
         height: clamp(360px, 55vw, 500px);
         min-height: 0;
-        margin: 0 0 0 auto;
+        margin: 0;
     }
 
     .vamos-imagem img {
-        border-radius: 28px 0 0 0;
+        border-radius: 28px 28px 0 0;
     }
 }
 
 @media (max-width: 600px) {
 
     .container {
-        padding-inline: clamp(16px, 5vw, 24px);
+        --container-padding: clamp(16px, 5vw, 24px);
+
+        padding-inline: var(--container-padding);
     }
 
     .hero_home {
@@ -1407,7 +1416,7 @@ body {
     }
 
     .infra-container {
-        width: calc(100% - 32px);
+        width: 100%;
 
         gap: 28px;
     }
@@ -1451,7 +1460,8 @@ body {
     }
 
     .sobre-projeto .texto {
-        padding: clamp(38px, 10vw, 52px) clamp(18px, 6vw, 32px);
+        padding-block: clamp(38px, 10vw, 52px);
+        padding-inline: 0;
     }
 
     .sobre-projeto .texto h2 {
@@ -1488,7 +1498,7 @@ body {
     }
 
     .controle-infra {
-        padding: clamp(42px, 10vw, 58px) clamp(18px, 6vw, 32px);
+        padding-block: clamp(42px, 10vw, 58px);
         gap: 36px;
     }
 
@@ -1502,7 +1512,7 @@ body {
 
     .esquerda img {
         width: 100%;
-        height: clamp(230px, 66vw, 340px);
+        height: clamp(270px, 70vw, 380px);
         margin-top: 28px;
     }
 
@@ -1526,11 +1536,12 @@ body {
     }
 
     .beneficio-controle p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .vamos-texto {
-        padding: clamp(42px, 10vw, 58px) clamp(18px, 6vw, 32px);
+        padding-block: clamp(42px, 10vw, 58px);
+        padding-inline: 0;
     }
 
     .vamos-texto h2 {
@@ -1571,7 +1582,9 @@ body {
 @media (max-width: 400px) {
 
     .container {
-        padding-inline: clamp(14px, 4vw, 18px);
+        --container-padding: clamp(14px, 4vw, 18px);
+
+        padding-inline: var(--container-padding);
     }
 
     .hero_texto h1 {
@@ -1603,7 +1616,7 @@ body {
     }
 
     .infra-container {
-        width: calc(100% - 28px);
+        width: 100%;
     }
 
     .container-parceria h2 {
@@ -1625,7 +1638,7 @@ body {
     }
 
     .sobre-projeto .texto {
-        padding-inline: 16px;
+        padding-inline: 0;
     }
 
     .sobre-projeto .texto h2 {
@@ -1638,19 +1651,19 @@ body {
     }
 
     .controle-infra {
-        padding-inline: 16px;
+        padding-inline: var(--container-padding);
     }
 
     .esquerda p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .esquerda img {
-        height: 220px;
+        height: 260px;
     }
 
     .vamos-texto {
-        padding-inline: 16px;
+        padding-inline: 0;
     }
 
     .vamos-texto h2 {
