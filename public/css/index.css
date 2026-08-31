@@ -856,22 +856,24 @@ body {
 
 .vamos-juntos {
     width: 100%;
-    height: 65vh;
+    min-height: 620px;
     background-color: #F8FBFB;
     display: flex;
+    overflow: hidden;
 }
 
 .vamos-texto {
     width: 60%;
-    padding: 9vh 5vw 6vh 8vw;
+    padding: clamp(60px, 8vh, 90px) 5vw clamp(50px, 6vh, 70px) 8vw;
 }
 
 .vamos-juntos-texto {
+    display: inline-block;
     color: var(--cor-secundaria);
-    font-size: 4rem;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
     font-weight: 700;
-    border-bottom: 0.15vw solid #43AECA;
-    padding-bottom: 0.6vh;
+    border-top: 2px solid #43AECA;
+    padding-top: 12px;
 }
 
 .vamos-texto h2 {
@@ -887,35 +889,41 @@ body {
 }
 
 .vamos-texto p {
-    width: 75%;
+    width: min(100%, 680px);
     margin-top: 2vh;
     color: #667276;
     font-size: 1.2rem;
-    line-height: 1.0;
+    line-height: 1.5;
 }
 
 .vamos-botoes {
     display: flex;
-    gap: 1vw;
+    gap: 16px;
     margin-top: 4vh;
 }
 
 .vamos-botoes button {
-    height: 5.5vh;
-    padding: 0 1.5vw;
-    border-radius: 0.3vw;
+    min-height: 58px;
+    padding: 14px 20px;
+    border-radius: 4px;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 1vw;
+    justify-content: space-between;
+    gap: 24px;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .botao-principal {
     background-color: #0B6C80;
     color: var(--cor-branco);
-    border: 0;
+    border: 1px solid #0B6C80;
 }
 
 .botao-secundario {
@@ -924,10 +932,44 @@ body {
     border: 1px solid #D4DCE5;
 }
 
+.vamos-botoes button:hover {
+    transform: translateY(-2px);
+}
+
+.botao-principal:hover {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.botao-secundario:hover {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+.botao-principal:hover img {
+    transform: translateX(5px);
+}
+
+.botao-secundario:hover .seta_normal {
+    opacity: 0;
+    transform: translateX(5px);
+}
+
+.botao-secundario:hover .seta_hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.vamos-botoes button:focus-visible {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 3px;
+}
+
 .vamos-imagem {
     width: 40%;
-    height: 100%;
-    margin-top: 4%;
+    min-height: 620px;
+    margin-top: 48px;
 }
 
 .vamos-imagem img {
@@ -1066,6 +1108,24 @@ body {
     .esquerda p,
     .beneficio-controle p {
         font-size: 0.9rem;
+    }
+
+    .vamos-juntos {
+        min-height: 580px;
+    }
+
+    .vamos-texto {
+        width: 58%;
+        padding-inline: clamp(40px, 6vw, 72px);
+    }
+
+    .vamos-texto h2 {
+        font-size: clamp(2rem, 3.2vw, 2.3rem);
+    }
+
+    .vamos-imagem {
+        width: 42%;
+        min-height: 580px;
     }
 }
 
@@ -1239,6 +1299,31 @@ body {
     .linha-beneficio {
         width: 48px;
         height: 2px;
+    }
+
+    .vamos-juntos {
+        flex-direction: column;
+    }
+
+    .vamos-texto {
+        width: 100%;
+        padding: clamp(52px, 8vw, 72px) clamp(32px, 7vw, 64px);
+    }
+
+    .vamos-texto h2,
+    .vamos-texto p {
+        max-width: 720px;
+    }
+
+    .vamos-imagem {
+        width: calc(100% - clamp(32px, 7vw, 64px));
+        height: clamp(360px, 55vw, 500px);
+        min-height: 0;
+        margin: 0 0 0 auto;
+    }
+
+    .vamos-imagem img {
+        border-radius: 28px 0 0 0;
     }
 }
 
@@ -1443,6 +1528,44 @@ body {
     .beneficio-controle p {
         font-size: 0.95rem;
     }
+
+    .vamos-texto {
+        padding: clamp(42px, 10vw, 58px) clamp(18px, 6vw, 32px);
+    }
+
+    .vamos-texto h2 {
+        margin-top: 28px;
+        font-size: clamp(1.75rem, 8vw, 2.15rem);
+    }
+
+    .vamos-texto h2 br {
+        display: none;
+    }
+
+    .vamos-texto p {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    .vamos-botoes {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .vamos-botoes button {
+        width: 100%;
+        min-height: 58px;
+    }
+
+    .vamos-imagem {
+        width: 100%;
+        height: clamp(270px, 72vw, 400px);
+    }
+
+    .vamos-imagem img {
+        border-radius: 0;
+    }
 }
 
 @media (max-width: 400px) {
@@ -1524,5 +1647,21 @@ body {
 
     .esquerda img {
         height: 220px;
+    }
+
+    .vamos-texto {
+        padding-inline: 16px;
+    }
+
+    .vamos-texto h2 {
+        font-size: clamp(1.65rem, 8.5vw, 1.95rem);
+    }
+
+    .vamos-botoes button {
+        padding-inline: 16px;
+    }
+
+    .vamos-imagem {
+        height: 250px;
     }
 }
