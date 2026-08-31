@@ -1,17 +1,13 @@
 var nodesModel = require("../models/nodesModel");
+
 function chamarHPC(req, res){
-    var nome = req.body.nomeServer;
     var fk_empresa = req.body.fk_empresaServer;
 
-    if(nome == undefined){
-        res.status(400).send("Nome está undefined!");
-
-    }else if(fk_empresa == undefined){
+    if(fk_empresa == undefined){
         res.status(400).send("empresa está undefined!");
 
     }else{
         nodesModel.chamarHPC(
-            nome,
             fk_empresa
         )
     
@@ -29,21 +25,16 @@ function chamarHPC(req, res){
 }}
 
 function chamarCluster(req, res){
-        var nome = req.body.nomeServer;
-        var fk_ambiente_hpc= req.body.ambiente_hpc_fkServer;
+var fk_ambiente_hpc = req.body.fk_ambiente_hpcServer;
 
-    if (nome == undefined) {
-
-        res.status(400).send("Nome está undefined!");
-
-    }  else if ( fk_ambiente_hpc== undefined) {
+    if ( fk_ambiente_hpc== undefined) {
 
         res.status(400).send("Ambiente hpc está undefined!");
 
     } else{
         nodesModel.chamarCluster(
-            nome,
-            ambiente_hpc_fk
+        fk_ambiente_hpc
+
         )
     
     .then(function(resultado) {
@@ -55,8 +46,6 @@ function chamarCluster(req, res){
         .catch(function(erro) {
         res.status(500).json(erro.sqlMessage);
         });
-
-
 
     }
 
@@ -108,12 +97,12 @@ function cadastrar(req, res) {
         .catch(function(erro) {
         res.status(500).json(erro.sqlMessage);
         });
-        }
-
-        module.exports = {
+    }
+        
+}
+    
+module.exports = {
     cadastrar,
     chamarHPC,
     chamarCluster
-}
-
 }
