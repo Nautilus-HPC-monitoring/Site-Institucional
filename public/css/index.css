@@ -605,14 +605,14 @@ body {
 
 .impactos {
     width: 100%;
-    height: 100vh;
+    height: max(100vh, 800px);
     background-color: #F8FBFB;
     position: relative;
     overflow: hidden;
 }
 
 .introducao {
-    width: 27%;
+    width: min(480px, 45%);
     position: absolute;
     top: 8%;
     left: var(--container-padding);
@@ -620,9 +620,10 @@ body {
 
 .introducao h1 {
     color: #333333;
-    font-size: 2rem;
+    font-size: clamp(2rem, 2.2vw, 2.4rem);
     font-weight: 400;
     margin: 0;
+    white-space: nowrap;
 }
 
 .introducao span {
@@ -634,40 +635,47 @@ body {
 }
 
 .introducao p {
-    width: 95%;
+    width: 100%;
     margin-top: 2vh;
     color: #111111;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
     line-height: 1.4;
 }
 
 .area-arvore {
-    width: calc(100% - var(--container-padding) - var(--container-padding));
+    width: min(1200px, calc(100% - var(--container-padding) - var(--container-padding)));
     height: 100%;
     position: absolute;
     top: 0;
-    left: var(--container-padding);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .img-arvore {
     position: absolute;
-    height: 85%;
+    height: 74%;
     width: auto;
-    top: 15%;
+    top: auto;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     object-fit: contain;
 }
 
-.caixa-info {
+.impacto-item {
     position: absolute;
-    width: 17vw;
-    min-height: 9vh;
-    padding: 1.5vh 0.6vw;
-    background-color: #DDF3F5;
-    border: 0.08vw solid #43AECA;
+    width: clamp(230px, 18vw, 285px);
     z-index: 5;
+}
+
+.caixa-info {
+    position: relative;
+    width: 100%;
+    min-height: 72px;
+    padding: 11px 13px;
+    background-color: #F0FBFC;
+    border: 1px solid #43AECA;
 }
 
 .caixa-info::before {
@@ -675,9 +683,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -0.6vh;
-    left: 0.5vw;
-    background-color: #8DD9E1;
+    top: -5px;
+    left: 7px;
+    background-color: #BCE9ED;
     z-index: -1;
 }
 
@@ -689,69 +697,44 @@ body {
 }
 
 .caixa-info p {
-    margin-top: 0.5vh;
+    margin-top: 6px;
     color: #111111;
-    font-size: 0.7rem;
-    line-height: 1.3;
+    font-size: 0.74rem;
+    line-height: 1.4;
 }
 
-.caixa-energia {
-    top: 3%;
-    left: 52%;
+.impacto-energia {
+    top: 13%;
+    left: 53%;
 }
 
-.caixa-dados {
-    top: 25%;
+.impacto-dados {
+    top: 34%;
+    left: 65%;
+}
+
+.impacto-ociosidade {
+    top: 44%;
+    left: 8%;
+}
+
+.impacto-investimento {
+    top: 56%;
     left: 60%;
 }
 
-.caixa-ociosidade {
-    top: 40%;
-    left: 23%;
-}
-
-.caixa-investimento {
-    top: 50%;
-    left: 60%;
-}
-
-.caixa-multas {
-    top: 63%;
-    left: 23%;
+.impacto-multas {
+    top: 68%;
+    left: 11%;
 }
 
 .valor {
-    position: absolute;
+    display: block;
+    margin-top: 12px;
     color: var(--cor-secundaria);
-    font-size: 4rem;
+    font-size: clamp(1.2rem, 1.5vw, 1.55rem);
     font-weight: bold;
     white-space: nowrap;
-    z-index: 6;
-}
-
-.valor-energia {
-    top: 18%;
-    left: 52%;
-}
-
-.valor-dados {
-    top: 42%;
-    left: 59%;
-}
-
-.valor-ociosidade {
-    top: 52%;
-    left: 34%;
-}
-
-.valor-investimento {
-    top: 64%;
-    left: 57%;
-}
-
-.valor-multas {
-    top: 75%;
-    left: 36%;
 }
 
 .controle-infra {
@@ -1131,6 +1114,87 @@ body {
         width: 42%;
         min-height: 580px;
     }
+
+    /* A árvore dá lugar aos cartões antes que o diagrama fique comprimido. */
+    .impactos {
+        height: auto;
+        min-height: 0;
+        padding-block: clamp(56px, 7vw, 76px);
+        overflow: visible;
+    }
+
+    .introducao {
+        position: static;
+        width: min(100%, 620px);
+    }
+
+    .introducao p {
+        width: min(100%, 520px);
+        font-size: 0.95rem;
+    }
+
+    .area-arvore {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 48px;
+        transform: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(20px, 3vw, 32px);
+    }
+
+    .img-arvore {
+        display: none;
+    }
+
+    .impacto-item {
+        position: static;
+        width: auto;
+        max-width: 480px;
+        min-height: 250px;
+        flex: 1 1 340px;
+        background-color: var(--cor-branco);
+        border: 1px solid #CDE4E8;
+        border-top: 5px solid var(--cor-primaria);
+        border-radius: 8px;
+        box-shadow: 0 14px 32px rgba(16, 77, 91, 0.08);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caixa-info {
+        position: static;
+        min-height: 0;
+        padding: 26px 26px 18px;
+        background: transparent;
+        border: 0;
+    }
+
+    .caixa-info::before {
+        display: none;
+    }
+
+    .caixa-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .caixa-info p {
+        margin-top: 10px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .valor {
+        position: static;
+        width: 100%;
+        margin-top: auto;
+        padding: 0 26px 26px;
+        font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+        white-space: normal;
+    }
 }
 
 @media (max-width: 990px) {
@@ -1340,6 +1404,40 @@ body {
         --container-padding: clamp(16px, 5vw, 24px);
 
         padding-inline: var(--container-padding);
+    }
+
+    .impactos {
+        padding-block: 48px;
+    }
+
+    .introducao h1 {
+        font-size: clamp(1.75rem, 8vw, 2.1rem);
+        white-space: normal;
+    }
+
+    .introducao p br {
+        display: none;
+    }
+
+    .area-arvore {
+        margin-top: 36px;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .impacto-item {
+        min-height: 0;
+        flex-basis: 100%;
+        max-width: 600px;
+    }
+
+    .caixa-info {
+        padding: 20px;
+    }
+
+    .valor {
+        padding: 0 20px 22px;
+        font-size: clamp(1.25rem, 6vw, 1.55rem);
     }
 
     .hero_home {
