@@ -7,6 +7,8 @@ DROP DATABASE IF EXISTS nautilus;
 CREATE DATABASE nautilus;
 USE nautilus;
 
+
+
 CREATE TABLE empresa(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     razao_social VARCHAR(45),
@@ -20,8 +22,8 @@ CREATE TABLE endereco(
     cidade VARCHAR(45),
     estado CHAR(2),
     logradouro VARCHAR(100),
-    empresa_fk INT NOT NULL,
-    FOREIGN KEY (empresa_fk) REFERENCES empresa(id)
+    fk_empresa INT NOT NULL,
+    FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
 
 CREATE TABLE ambiente_hpc(
@@ -29,8 +31,8 @@ CREATE TABLE ambiente_hpc(
     nome VARCHAR(45),
     descricao VARCHAR(45),
     status VARCHAR(45),
-    empresa_fk INT NOT NULL,
-    FOREIGN KEY (empresa_fk) REFERENCES empresa(id)
+    fk_empresa INT NOT NULL,
+    FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
 
 CREATE TABLE cluster(
@@ -38,8 +40,8 @@ CREATE TABLE cluster(
 	nome VARCHAR(45),
     descricao VARCHAR(45),
     status VARCHAR(45),
-    ambiente_hpc_fk INT NOT NULL,
-    FOREIGN KEY (ambiente_hpc_fk) REFERENCES ambiente_hpc(id_ambiente_hpc)
+    fk_ambiente_hpc INT NOT NULL,
+    FOREIGN KEY (fk_ambiente_hpc) REFERENCES ambiente_hpc(id_ambiente_hpc)
 );
 
 CREATE TABLE node(
@@ -48,8 +50,8 @@ CREATE TABLE node(
     ip VARCHAR(45),
     status VARCHAR(45),
     sistema_operacional VARCHAR(45),
-    cluster_fk INT NOT NULL,
-    FOREIGN KEY (cluster_fk) REFERENCES cluster(id_cluster)
+    fk_cluster INT NOT NULL,
+    FOREIGN KEY (fk_cluster) REFERENCES cluster(id_cluster)
 );
 
 CREATE TABLE componente(
@@ -83,10 +85,10 @@ CREATE TABLE usuario(
 	nome VARCHAR(45),
 	email VARCHAR(45),
 	senha VARCHAR(45),
-	nivel_acesso_fk INT NOT NULL,
-	empresa_fk INT NOT NULL,
-	FOREIGN KEY (nivel_acesso_fk) REFERENCES nivel_acesso(id_nivel_acesso),
-	FOREIGN KEY (empresa_fk) REFERENCES empresa(id)
+	fk_nivel_acesso INT NOT NULL,
+	fk_empresa INT NOT NULL,
+	FOREIGN KEY (fk_nivel_acesso) REFERENCES nivel_acesso(id_nivel_acesso),
+	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
 
 CREATE TABLE componente_node(
