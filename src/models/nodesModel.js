@@ -5,7 +5,9 @@ function chamarHPC(nome,empresa_fk){
         ambiente_hpc.empresa_fk 
         from ambiente_hpc 
         join empresa on 
-        empresa.id = ambiente_hpc.empresa_fk `;
+        empresa.id = ambiente_hpc.empresa_fk 
+        where ambiente_hpc.nome = ${nome} and ambiente_hpc.empresa_fk =${empresa_fk}  `;
+    
          return database.executar(instrucaoSql);
 }
 
@@ -13,7 +15,8 @@ function chamarCluster(nome,ambiente_hpc_fk){
      var instrucaoSql = `SELECT cluster.nome,
         cluster.ambiente_hpc_fk 
         from cluster join ambiente_hpc on 
-        ambiente_hpc.id_ambiente_hpc = cluster.ambiente_hpc_fk`;
+        ambiente_hpc.id_ambiente_hpc = cluster.ambiente_hpc_fk 
+        where cluster.nome = ${nome} and cluster.ambiente_hpc_fk= ${ambiente_hpc_fk} `;
          return database.executar(instrucaoSql);
 }
 
@@ -31,5 +34,6 @@ function cadastrar(hostname, ip, status, sistemaOperacional, clusterFk){
 
 module.exports = {
     cadastrar,
-    chamarHPC
+    chamarHPC,
+    chamarCluster
 };
