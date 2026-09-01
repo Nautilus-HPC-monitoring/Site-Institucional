@@ -241,7 +241,9 @@
 
                 <div class="form-actions">
                     <button type="button" class="btn btn-secondary">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Cadastrar empresa</button>
+                    <button type="button" class="btn btn-primary" onclick="cadastrar()">
+                        Cadastrar empresa
+                    </button>
                 </div>
             </form>
         </main>
@@ -265,6 +267,63 @@
         mobileSidebar.classList.remove('active');
         document.getElementById('sidebar-overlay').classList.remove('active');
     };
+</script>
+
+<script>
+    function cadastrar() {
+
+        var razaoSocialVar = document.getElementById("razao-social").value;
+        var cnpjVar = document.getElementById("cnpj").value;
+        var dataRegistroVar = document.getElementById("data-registro").value;
+        var logradouroVar = document.getElementById("logradouro").value;
+        var numeroVar = document.getElementById("numero").value;
+        var cidadeVar = document.getElementById("cidade").value;
+        var estadoVar = document.getElementById("estado").value;
+
+        console.log({
+            razaoSocialServer: razaoSocialVar,
+            cnpjServer: cnpjVar,
+            dataRegistroServer: dataRegistroVar,
+            logradouroServer: logradouroVar,
+            numeroServer: numeroVar,
+            cidadeServer: cidadeVar,
+            estadoServer: estadoVar
+        });
+
+        fetch("/empresa/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                razaoSocialServer: razaoSocialVar,
+                cnpjServer: cnpjVar,
+                dataRegistroServer: dataRegistroVar,
+                logradouroServer: logradouroVar,
+                numeroServer: numeroVar,
+                cidadeServer: cidadeVar,
+                estadoServer: estadoVar
+            })
+        })
+            .then(function (resposta) {
+
+                console.log("Status:", resposta.status);
+
+                return resposta.text().then(function (texto) {
+
+                    console.log("Resposta do servidor:", texto);
+
+                    if (!resposta.ok) {
+                        throw texto;
+                    }
+
+                    return texto;
+                });
+            })
+            .catch(function (erro) {
+                console.log("ERRO:", erro);
+            });
+    }
 </script>
 
 </html>
